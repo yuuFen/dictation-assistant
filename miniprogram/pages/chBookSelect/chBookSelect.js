@@ -38,120 +38,120 @@ Page({
       {
         moudles: [
           {
-            url: '/pages/chBookSelect/chBookSelect',
-            src: '/img/listen.png',
-            text: '语音听写'
+            url: '/pages/listen/listen?book=ch_su_11',
+            src: '/img/book/ch_su_21.jpg',
+            text: '苏教版二年级上册'
           },
           {
-            url: '/pages/talk/talk',
-            src: '/img/talk.png',
-            text: '对话练习'
+            url: '/pages/listen/listen?book=ch_su_12',
+            src: '/img/book/ch_su_22.jpg',
+            text: '苏教版二年级下册'
+          }, 
+          {
+            url: '/pages/listen/listen?book=ch_zhe_11',
+            src: '/img/book/ch_su_31.jpg',
+            text: '浙教版二年级上册'
           },
           {
-            url: '/pages/speak/speak',
-            src: '/img/speak.png',
-            text: '课文朗读'
-          },
-          {
-            url: '/pages/write/write',
-            src: '/img/write.png',
-            text: '笔画练习'
-          },
-        ]
-      }, 
-      {
-        moudles: [
-          {
-            url: '/pages/chBookSelect/chBookSelect',
-            src: '/img/listen.png',
-            text: '语音听写'
-          },
-          {
-            url: '/pages/talk/talk',
-            src: '/img/talk.png',
-            text: '对话练习'
-          },
-          {
-            url: '/pages/speak/speak',
-            src: '/img/speak.png',
-            text: '课文朗读'
-          },
-          {
-            url: '/pages/write/write',
-            src: '/img/write.png',
-            text: '笔画练习'
+            url: '/pages/listen/listen?book=ch_zhe_12',
+            src: '/img/book/ch_su_32.jpg',
+            text: '浙教版二年级下册'
           },
         ]
       }, 
       {
         moudles: [
           {
-            url: '/pages/chBookSelect/chBookSelect',
-            src: '/img/listen.png',
-            text: '语音听写'
+            url: '/pages/listen/listen?book=ch_su_11',
+            src: '/img/book/ch_su_21.jpg',
+            text: '苏教版三年级上册'
           },
           {
-            url: '/pages/talk/talk',
-            src: '/img/talk.png',
-            text: '对话练习'
+            url: '/pages/listen/listen?book=ch_su_12',
+            src: '/img/book/ch_su_22.jpg',
+            text: '苏教版三年级下册'
+          }, 
+          {
+            url: '/pages/listen/listen?book=ch_zhe_11',
+            src: '/img/book/ch_su_31.jpg',
+            text: '浙教版三年级上册'
           },
           {
-            url: '/pages/speak/speak',
-            src: '/img/speak.png',
-            text: '课文朗读'
+            url: '/pages/listen/listen?book=ch_zhe_12',
+            src: '/img/book/ch_su_32.jpg',
+            text: '浙教版三年级下册'
+          },
+        ]
+      }, 
+      {
+        moudles: [
+          {
+            url: '/pages/listen/listen?book=ch_su_11',
+            src: '/img/book/ch_su_21.jpg',
+            text: '苏教版四年级上册'
           },
           {
-            url: '/pages/write/write',
-            src: '/img/write.png',
-            text: '笔画练习'
+            url: '/pages/listen/listen?book=ch_su_12',
+            src: '/img/book/ch_su_22.jpg',
+            text: '苏教版四年级下册'
+          }, 
+          {
+            url: '/pages/listen/listen?book=ch_zhe_11',
+            src: '/img/book/ch_su_31.jpg',
+            text: '浙教版四年级上册'
+          },
+          {
+            url: '/pages/listen/listen?book=ch_zhe_12',
+            src: '/img/book/ch_su_32.jpg',
+            text: '浙教版四年级下册'
           },
         ]
       },
       {
         moudles: [
           {
-            url: '/pages/chBookSelect/chBookSelect',
-            src: '/img/listen.png',
-            text: '语音听写'
+            url: '/pages/listen/listen?book=ch_su_11',
+            src: '/img/book/ch_su_21.jpg',
+            text: '苏教版五年级上册'
           },
           {
-            url: '/pages/talk/talk',
-            src: '/img/talk.png',
-            text: '对话练习'
+            url: '/pages/listen/listen?book=ch_su_12',
+            src: '/img/book/ch_su_22.jpg',
+            text: '苏教版五年级下册'
+          }, 
+          {
+            url: '/pages/listen/listen?book=ch_zhe_11',
+            src: '/img/book/ch_su_31.jpg',
+            text: '浙教版五年级上册'
           },
           {
-            url: '/pages/speak/speak',
-            src: '/img/speak.png',
-            text: '课文朗读'
-          },
-          {
-            url: '/pages/write/write',
-            src: '/img/write.png',
-            text: '笔画练习'
+            url: '/pages/listen/listen?book=ch_zhe_12',
+            src: '/img/book/ch_su_32.jpg',
+            text: '浙教版五年级下册'
           },
         ]
       },
       {
         moudles: [
           {
-            url: '/pages/chBookSelect/chBookSelect',
-            src: '/img/listen.png',
-            text: '语音听写'
+            url: '/pages/listen/listen?book=ch_su_11',
+            src: '/img/book/ch_su_21.jpg',
+            text: '苏教版六年级上册'
           },
           {
-            url: '/pages/talk/talk',
-            src: '/img/talk.png',
-            text: '对话练习'
+            url: '/pages/listen/listen?book=ch_su_12',
+            src: '/img/book/ch_su_22.jpg',
+            text: '苏教版六年级下册'
+          }, 
+          {
+            url: '/pages/listen/listen?book=ch_zhe_11',
+            src: '/img/book/ch_su_31.jpg',
+            text: '浙教版六年级上册'
           },
           {
-            url: '/pages/speak/speak',
-            src: '/img/speak.png',
-            text: '课文朗读'
-          },
-          {
-            url: '/pages/write/write',
-            src: '/img/write.png',
-            text: '笔画练习'
+            url: '/pages/listen/listen?book=ch_zhe_12',
+            src: '/img/book/ch_su_32.jpg',
+            text: '浙教版六年级下册'
           },
         ]
       }, 
