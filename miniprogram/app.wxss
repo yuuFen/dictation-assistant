@@ -1,0 +1,10 @@
+/**app.wxss**/
+
+page {
+  background-color: #FAF0E6;
+}
+.container {
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+} 

@@ -1,0 +1,48 @@
+#index .title-wrapper {
+  padding: 0 30rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: 120rpx;
+  margin-bottom: 140rpx;
+  justify-content: center;  
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+#index .title-wrapper .title-img {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 20rpx;
+
+}
+
+/* 模块 */
+#index .module-container {
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  box-sizing: border-box;
+  flex-direction:row;
+  justify-content: center;
+}
+
+#index .module-container .box-wrapper{
+  height: 300rpx;
+  width: 200rpx;
+  margin: 0 60rpx;
+  margin-bottom: 64rpx;
+} 
+
+/* 服务选项 */
+#index .module-container .box-wrapper .servicebox{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+}
+#index .module-container .box-wrapper .servicebox .box-img{
+  width:300rpx;
+  height:300rpx;
+}
+/* 模块 */

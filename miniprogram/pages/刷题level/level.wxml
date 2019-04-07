@@ -1,0 +1,43 @@
+<!--miniprogram/pages/level/level.wxml-->
+<view id='level'>
+  <view class="tip_container">
+    <view class='question_type'>
+      <text style='margin-left:20rpx;font-size: 40rpx;font-weight: 400px;'>{{question.type}}</text>
+    </view>
+    <view class="question_index">
+      <!-- 在这里使用wx:if 当index+1=length时 变为提交 -->
+      <text wx:if="{{index+1==length&&_selection!=''}}" catchtap='submit' style='font-size:60rpx;'>提交</text>
+
+      <text wx:else style='font-size: 40rpx;'> 
+        <text style='font-size:60rpx;font-style:italic;'>{{index+1}} </text>/ {{length}}
+      </text>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view style='display:block;width:100%;height:1rpx;background-color:#ddd;margin-bottom:30rpx;margin-top:15rpx;'></view>
+
+  <view class='content_container'>
+    <view class='question_title'>
+      <text>{{question.title}}</text>
+    </view>
+    <view class='question_options'>
+      <view class='option'  data-selection="A" catchtap='select'>
+        <view class="{{_selection == 'A'?'selected':'unselected'}}">A</view>
+        <text>{{question.optionA}}</text>
+      </view>
+      <view class='option'  data-selection="B" catchtap='select'>
+        <view class="{{_selection == 'B'?'selected':'unselected'}}">B</view>
+        <text>{{question.optionB}}</text>
+      </view>
+      <view class='option'  data-selection="C" catchtap='select'>
+        <view class="{{_selection == 'C'?'selected':'unselected'}}">C</view>
+        <text>{{question.optionC}}</text>
+      </view>
+      <view class='option'  data-selection="D" catchtap='select'>
+        <view class="{{_selection == 'D'?'selected':'unselected'}}">D</view>
+        <text>{{question.optionD}}</text>
+      </view>
+    </view>
+  </view>
+</view>

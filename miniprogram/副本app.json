@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/pk/pk",
+    "pages/en/en",
+    "pages/ch/ch",
+    "pages/listen/listen",
+    "pages/talk/talk",
+    "pages/speak/speak",
+    "pages/write/write"
+  ],
+  "window": {
+    "backgroundColor": "#FAF0E6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FAF0E6",
+    "navigationBarTitleText": "听说读写",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#444",
+    "color": "#666",
+    "backgroundColor": "#FAF0E6",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home.png",
+        "selectedColor": "#000000",
+        "color": "#000000"
+      },
+      {
+        "pagePath": "pages/pk/pk",
+        "text": "挑战",
+        "iconPath": "img/pk.png",
+        "selectedIconPath": "img/pk.png",
+        "selectedColor": "#000000",
+        "color": "#000000"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/my.png",
+        "selectedColor": "#000000",
+        "color": "#000000"
+      }
+    ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.2.2",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
+}

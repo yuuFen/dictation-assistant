@@ -1,0 +1,105 @@
+/* 题型及题量 */
+.tip_container {
+  padding: 0px 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.tip_container .question_type {
+  display:flex;
+  flex-direction:column;
+  padding: 5rpx;
+  margin-bottom: 5rpx;
+}
+.tip_container .question_index {
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:center;
+  margin-right: 20rpx;
+}
+/* 内容 */
+.content_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+}
+.content_container .question_title {
+  width: 90%;
+  height: 210rpx;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 题目选项 */
+.content_container .question_options {
+  width: 70%;
+  height: 600rpx;
+  display: flex;
+  flex-wrap: unwrap;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center; 
+}
+.content_container .question_options .option{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  margin: 30rpx 0;
+}
+.content_container .question_options .option view {
+  display: inline-block;
+  text-align: center;
+  height: 1em;
+  line-height: 1em;
+  width: 2.2em;
+  padding: 0.6em 0;
+  border: 1rpx solid #000;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  z-index: -1;
+}
+.content_container .question_options .option text {
+  z-index: -1;
+  width: 80%;
+}
+.content_container .question_options .option .unselected {
+  color: #000;
+  background-color: #fff;
+}
+.content_container .question_options .option .selected {
+  color: #fff;
+  background-color: #000; 
+}
+/* 下一题按钮 */
+.content_container .next_wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.content_container .next_wrapper  view {
+  width: 50%;
+  background-color: #fff;
+  border: 1rpx solid #000;
+  color: #000;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:18px;
+  text-align:center;
+  text-decoration:none;
+  line-height:2.55555556;
+  border-radius:5px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+}

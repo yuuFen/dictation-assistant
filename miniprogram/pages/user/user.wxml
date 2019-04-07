@@ -1,0 +1,41 @@
+<view id="user">
+
+  <view class="head">
+    <button
+      open-type="getUserInfo" 
+      bindgetuserinfo="login"
+      style="background-image: url(./unlogin.png);background-size: cover;"
+      class="login {{logged ? 'disappear':''}}"
+    ></button>
+    <image class="photo {{logged ? 'show':''}}" src="{{userInfo.avatarUrl}}"></image>
+    <view class="name">{{userInfo.nickName}}</view>
+  </view>
+
+
+  <view class='content'>
+    <view class="servicebox" bindtap="collection">
+      <image class='icon' src='../../img/设置.png'></image>
+      <text class='text'>打卡签到</text>
+    </view>  
+    <view class="servicebox" bindtap="release">
+      <image class='icon' src='../../img/设置.png'></image>
+      <text class='text'>我的收藏</text>
+    </view>  
+    <view class="servicebox" bindtap="information">
+      <image class='icon' src='../../img/设置.png'></image>
+      <text class='text'>天梯排行</text>
+    </view>
+    <view class="servicebox" bindtap="message">
+      <image class='icon' src='../../img/设置.png'></image>
+      <text class='text'>信息设置</text>
+    </view>
+    <view class="servicebox" bindtap="order">
+      <image class='icon' src='../../img/设置.png'></image>
+      <text class='text'>问题反馈</text>
+    </view>
+  </view>
+
+
+
+
+</view>
