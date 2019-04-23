@@ -31,11 +31,6 @@ Page({
   onLoad: function (options) {
 
   },
-  toown: function () {
-    wx.navigateTo({
-      url: '../own/own'
-    })
-  },
 
   onReady: function () {
 

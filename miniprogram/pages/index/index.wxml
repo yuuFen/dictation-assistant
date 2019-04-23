@@ -2,7 +2,7 @@
 
   <view class="title-wrapper">
     <view>
-      <image src="/img/c.png" class='title-img'></image>
+      <image src="" class='title-img'></image>
     </view>
   </view>
 

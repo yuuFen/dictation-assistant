@@ -9,6 +9,7 @@ Page({
     current: 0,//当前所在滑块的 index
     scrollLeft: 0,//滚动条的位置,一个选项卡宽度是90（自定义来自css），按比例90*n设置位置
     navlist: ["一年级", "二年级", "三年级", "四年级", "五年级", "六年级"],
+    //课本列表
     conlist: [
 
       {
@@ -158,34 +159,6 @@ Page({
 
 
     ],
-    
-    moudles: [
-      {
-        url: '/pages/chBookSelect/chBookSelect',
-        src: '/img/listen.png',
-        text: '语音听写'
-      },
-      {
-        url: '/pages/talk/talk',
-        src: '/img/talk.png',
-        text: '对话练习'
-      },
-      {
-        url: '/pages/speak/speak',
-        src: '/img/speak.png',
-        text: '课文朗读'
-      },
-      {
-        url: '/pages/write/write',
-        src: '/img/write.png',
-        text: '笔画练习'
-      }
-    ]
-
-
-
-
-
   },
   //tab切换
   tab: function (event) {

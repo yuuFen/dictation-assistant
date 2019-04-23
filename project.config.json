@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -40,6 +40,14 @@
 					"id": -1,
 					"name": "chBookSelect",
 					"pathName": "pages/chBookSelect/chBookSelect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "listen&book=ch_su_11",
+					"pathName": "pages/listen/listen",
+					"query": "book=ch_su_11",
 					"scene": null
 				}
 			]

@@ -1,29 +1,115 @@
-/*下拉刷新上拉加载  */
-page{
-  background:#dddddd;
+page {
+  background-color: #fff;
 }
-.list{
- padding: 20rpx 0;
+
+/* tab切换效果 */
+.swiper-box {
+  /* overflow-y: scroll; */
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
-.item{
-   padding: 0 50rpx;
-  margin-bottom: 20rpx;
-  background: #ffffff;
+.swiper {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  /* position: fixed; */
 }
-.item-name{
-  height: 50rpx;
-  line-height: 50rpx;
-  font-size: 30rpx;
+.tip {
+  color: #888;
+  /* border-bottom: 1px solid #f2f2f2; */
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 35rpx;
+  padding: 30rpx;
 }
-.item-box{
-  height: 40rpx;
-  line-height: 40rpx;
-  font-size: 25rpx;
+scroll-view{
+  width: 100%;
+  height: 100%;/*动态高度*/
+  overflow-y: scroll;
 }
-.item-status{
+/* 顶部tab */
+.tab{
+  height: 80rpx;
+  box-shadow: 0px 2px 3px #888888;
+}
+.tab-nav{
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+  background-color: #FAF0E6;
+}
+
+.tab-nav .tab-nav-c view{
+  height: 80rpx;
+  line-height: 80rpx;
   float: left;
+  width: 90px;
+  font-size: 30rpx;
+  text-align: center;
+  color: #000;
 }
-.item-time{
- float: right;
+.tab-nav view.on{
+  background: #FAF0E6;
+  color: rgb(255, 201, 18); 
+  position: relative;
 }
-/*下拉刷新上拉加载  */
+.tab-nav view.on:after{
+   content: "";
+   display: block;
+   height: 6rpx;
+   width: 26px;
+   background: rgb(243, 189, 10);
+   position: absolute;
+   bottom: 2px;
+   left: 32px;
+   border-radius: 16rpx;
+}
+/* tab切换效果 */
+
+/* 词语 */
+#listen .module-container {
+  width: 100%;
+  display: flex;
+  flex-wrap:nowrap;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+#listen .module-container .box-wrapper{
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #c2c2c2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap:nowrap;
+  width: 100%;
+  height: 150rpx;
+} 
+#listen .module-container .box-wrapper .text-box{
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#listen .module-container .box-wrapper .text-box text{
+  font-size: 40rpx;
+  width:60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+/* 服务选项 */
+#listen .module-container .box-wrapper .servicebox{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+}
+#listen .module-container .box-wrapper .servicebox .box-img{
+  height:250rpx;
+  width: 100%;
+  margin-bottom: 5rpx;
+}
+/* 书本选项 */

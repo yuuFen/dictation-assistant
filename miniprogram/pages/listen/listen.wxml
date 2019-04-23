@@ -1,13 +1,31 @@
-<view class="container">
-  <view class='list'>
-    <!--item  -->
-    <view class='item'  wx:for="{{list}}" wx:key="unique">
-      <view class='item-name'>名称:{{item.name}}</view>
-      <view class='item-box'>
-          <view class='item-status'>状态:{{item.status}}</view>
-          <view class='item-time'>时间:{{item.time}}</view>
-      </view>
-    </view>
-    <!--item  -->
+<view id="listen">
+  <view class='tab'>
+      <scroll-view scroll-x="true" class='tab-nav' scroll-left='{{scrollLeft}}' scroll-with-animation="true">
+        <view class='tab-nav-c' style='width:{{conlist.length*90}}px'>
+            <view wx:for="{{conlist}}" wx:key="unique" class='{{current==index?"on":""}}' data-current="{{index}}" bindtap='tab'>第{{index==0?'一':index==1?'二':index==2?'三':index==3?'四':index==4?'五':index==5?'六':index==6?'七':index==7?'八':index==8?'九':index==9?'十':''}}单元</view> 
+        </view>
+      </scroll-view>
   </view>
+  <view class='swiper-box'>
+      <swiper class='swiper'  style='height:{{conlist[current].length*150+135}}rpx;' current="{{current}}" bindchange="eventchange">
+        <swiper-item wx:for="{{conlist}}" wx:key="unique">
+        <!-- <scroll-view scroll-y="true"> -->
+          <view class='tip'>左右滑动切换哦</view>
+
+          <view class="module-container">
+            <view class="box-wrapper" wx:for="{{item}}" wx:key="index">
+              <view class="text-box">
+                <text wx:for="{{item.content}}">{{item}}</text>
+              </view>
+              <view class="img-box">
+                <!-- <image></image> -->
+              </view>
+            </view>
+          </view>
+        <!-- </scroll-view> -->
+        </swiper-item>
+    </swiper>
+  </view>
+
+
 </view>  

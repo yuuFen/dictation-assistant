@@ -1,114 +1,176 @@
-/**
- * The MIT License (MIT)
- * 下拉刷新上拉加载
- * @author 透笔度
- * @开源中国 https://my.oschina.net/tbd/blog
- * @码云 https://gitee.com/dgx
- */
 
-//mocklist 模拟数据库数据表数据
-var mocklist = require("./mocklist.js").mocklist;
-//代码实例供参考
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ispro: false,//是否在请求中
-    current: 1,//页数，开始是1从第一页开始请求
-    size: 20,//请求的个数，可自定义设置
-    isnext: true,//是否有下一页
-    list: []//接口实际数据
+    current: 0,//当前所在滑块的 index
+    scrollLeft: -90,//滚动条的位置,一个选项卡宽度是90（自定义来自css），按比例90*n设置位置
+    navlist: ["第一单元", "第二单元", "第三单元", "第四单元", "第五单元", "第六单元", "第七单元", "第八单元"],
+    conlist: [],
   },
-  //模拟后台返回数据
-  SEVER_PHP: function (objs) {
-    var that = this;
-    var res = {};
-    setTimeout(function () {
-      res.current = objs.current;//第几页
-      res.allcount = mocklist.length;//总记录个数
-      res.allpage = Math.ceil(mocklist.length / objs.size)//总页数
-      res.list = mocklist.slice((objs.current - 1) * objs.size, (objs.current - 1) * objs.size + objs.size);//实际数据
-      res.isnext = (objs.current - 1) * objs.size + objs.size > mocklist.length ? false : true//是否有下一页
-      objs.success(res);
-    }, 500);
 
+  //tab切换
+  tab: function (event) {
+    // console.log(event.target.dataset.current);
+    this.setData({ current: event.target.dataset.current })
+    //锚点处理
+    this.setData({ 
+      scrollLeft: event.target.dataset.current * 90 - 90,
+    })
   },
-  //ajax请求数据  依据实际请求进行修改
-  $_get: function (current, size, success, err) {
-    var that = this;
-    that.SEVER_PHP({
-      current: current,
-      size: size,
-      success: function (res) {
-        console.log(res, "接口返回结果");
-        success();//回调
-        that.setData({ list: that.data.list.concat(res.list) })//接口实际数据
-        that.setData({ current: res.current })//第几页
-        that.setData({ isnext: res.isnext })//是否有下一页
-        setTimeout(function () {//避免过快请求
-          that.setData({ ispro: false })//标记不在请求中
-        }, 1000)
-
-      },
-      err: function () {
-        err();//回调
-        setTimeout(function () {//避免过快请求
-          that.setData({ ispro: false })//标记不在请求中
-        }, 1000)
-
-      }
-    });
+  //滑动事件
+  eventchange: function (event) {
+    console.log(event.detail.current)
+    this.setData({ current: event.detail.current })
+    //锚点处理
+    this.setData({
+      scrollLeft: event.detail.current * 90 - 90,
+    })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.book)
     var that = this;
     var book = '';
+    const db = wx.cloud.database();
+    const _ = db.command;
+
     if (options.book.search("su") != -1) {
       book += '苏教版'
     }
-    if (options.book.search("ch") != -1) {
-      book += '语文'
-    } 
-    if (options.book.search("11") != -1) {
-      book += '一年级上册'
-    }
+    if (options.book.search("ch") != -1) { book += '语文' } else if (options.book.search("en") != -1) { book += '英语' } if (options.book.search("11") != -1) { book += '一年级上册' } else if (options.book.search("12") != -1) { book += '一年级下册' } else if (options.book.search("21") != -1) { book += '二年级上册' } else if (options.book.search("22") != -1) { book += '二年级下册' } else if (options.book.search("31") != -1) { book += '三年级上册' } else if (options.book.search("32") != -1) { book += '三年级下册' } else if (options.book.search("41") != -1) { book += '四年级上册' } else if (options.book.search("42") != -1) { book += '四年级下册' } else if (options.book.search("51") != -1) { book += '五年级上册' } else if (options.book.search("52") != -1) { book += '五年级下册' } else if (options.book.search("61") != -1) { book += '六年级上册' } else if (options.book.search("62") != -1) { book += '六年级下册' }
     wx.setNavigationBarTitle({
       title: book
     })
-    //第一页数据
-    that.setData({ ispro: true })//标记在请求中
-    wx.showToast({
-      mask: true,
-      title: '加载中...',
-      icon: 'loading',
-      duration: 500
+    let conlist = this.data.conlist;
+    db.collection(options.book).where({
+      'unit': 1,
+    }).get({
+      success(res) {
+        if (res.data.length != 0){
+          conlist[0] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+      }
     })
-    that.$_get(
-      that.data.current,
-      that.data.size
-      , function () {
-        console.log("第1页加载成功")
-        wx.showToast({
-          mask: true,
-          title: '加载成功',
-          icon: 'success',
-          duration: 500
-        })
-      },
-      function () {
-        console.log("第1页加载失败")
-        wx.showToast({
-          mask: true,
-          title: '加载失败',
-          icon: 'none',
-          duration: 500
-        })
-      })
-
+    db.collection(options.book).where({
+      'unit': 2,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[1] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 3,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[2] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 4,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {       
+          conlist[3] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 5,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[4] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 6,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[5] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 7,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[6] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 8,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[7] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+        console.log(that.data.conlist);
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 9,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[8] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+        console.log(that.data.conlist);
+      }
+    })
+    db.collection(options.book).where({
+      'unit': 10,
+    }).get({
+      success(res) {
+        if (res.data.length != 0) {
+          conlist[9] = res.data;
+          that.setData({
+            conlist: conlist
+          })
+        }
+        console.log(that.data.conlist);
+      }
+    })
   },
 
   /**
@@ -140,53 +202,16 @@ Page({
   },
 
   /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var that = this
-    if (!that.data.ispro) {//没有在请求中，开始加载数据
-      if (that.data.isnext) {//有下一页数据
-        //下一页数据
-        that.setData({ ispro: true })//标记在请求中
-        wx.showToast({
-          mask: true,
-          title: '加载中...',
-          icon: 'loading',
-          duration: 500
-        })
-        //触底操作，追加一页
-        var addpage = that.data.current + 1;
-        that.$_get(
-          addpage,
-          that.data.size
-          , function () {
-            console.log("第" + addpage + "页加载成功")
-            wx.showToast({
-              mask: true,
-              title: '加载成功',
-              icon: 'success',
-              duration: 500
-            })
-          },
-          function () {
-            console.log("第" + addpage + "页加载失败")
-            wx.showToast({
-              mask: true,
-              title: '加载失败',
-              icon: 'none',
-              duration: 500
-            })
-          })
-      } else {
-        console.log("没有数据了")
-        wx.showToast({
-          mask: true,
-          title: '没有数据了',
-          icon: 'none',
-          duration: 500
-        })
-      }
-    }
 
   },
 
