@@ -51,16 +51,6 @@ Page({
                 text: '苏教版一年级下册'
               },
               {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_11',
-                src: '/img/book/ch_zh_11.jpg',
-                text: '浙教版一年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_12',
-                src: '/img/book/ch_zh_12.jpg',
-                text: '浙教版一年级下册'
-              },
-              {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_11',
                 src: '/img/book/ch_rn_11.jpg',
                 text: '人教版一年级上册'
@@ -83,16 +73,6 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_22',
                 src: '/img/book/ch_su_22.jpg',
                 text: '苏教版二年级下册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_21',
-                src: '/img/book/ch_zh_21.jpg',
-                text: '浙教版二年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_22',
-                src: '/img/book/ch_zh_22.jpg',
-                text: '浙教版二年级下册'
               },
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_21',
@@ -119,16 +99,6 @@ Page({
                 text: '苏教版三年级下册'
               },
               {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_31',
-                src: '/img/book/ch_zh_31.jpg',
-                text: '浙教版三年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_32',
-                src: '/img/book/ch_zh_32.jpg',
-                text: '浙教版三年级下册'
-              },
-              {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_31',
                 src: '/img/book/ch_rn_31.jpg',
                 text: '人教版三年级上册'
@@ -151,16 +121,6 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_42',
                 src: '/img/book/ch_su_42.jpg',
                 text: '苏教版四年级下册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_41',
-                src: '/img/book/ch_zh_41.jpg',
-                text: '浙教版四年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_42',
-                src: '/img/book/ch_zh_42.jpg',
-                text: '浙教版四年级下册'
               },
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_41',
@@ -187,16 +147,6 @@ Page({
                 text: '苏教版五年级下册'
               },
               {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_51',
-                src: '/img/book/ch_zh_51.jpg',
-                text: '浙教版五年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_52',
-                src: '/img/book/ch_zh_52.jpg',
-                text: '浙教版五年级下册'
-              },
-              {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_51',
                 src: '/img/book/ch_rn_51.jpg',
                 text: '人教版五年级上册'
@@ -219,16 +169,6 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_62',
                 src: '/img/book/ch_su_62.jpg',
                 text: '苏教版六年级下册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_61',
-                src: '/img/book/ch_zh_61.jpg',
-                text: '浙教版六年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_zh_62',
-                src: '/img/book/ch_zh_62.jpg',
-                text: '浙教版六年级下册'
               },
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_61',
@@ -263,16 +203,6 @@ Page({
                 text: '苏教版一年级下册'
               },
               {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_11',
-                src: '/img/book/ch_zh_11.jpg',
-                text: '浙教版一年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_12',
-                src: '/img/book/ch_zh_12.jpg',
-                text: '浙教版一年级下册'
-              },
-              {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_11',
                 src: '/img/book/ch_rn_11.jpg',
                 text: '人教版一年级上册'
@@ -295,16 +225,6 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_22',
                 src: '/img/book/ch_su_22.jpg',
                 text: '苏教版二年级下册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_21',
-                src: '/img/book/ch_zh_21.jpg',
-                text: '浙教版二年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_22',
-                src: '/img/book/ch_zh_22.jpg',
-                text: '浙教版二年级下册'
               },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_21',
@@ -331,16 +251,6 @@ Page({
                 text: '苏教版三年级下册'
               },
               {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_31',
-                src: '/img/book/ch_zh_31.jpg',
-                text: '浙教版三年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_32',
-                src: '/img/book/ch_zh_32.jpg',
-                text: '浙教版三年级下册'
-              },
-              {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_31',
                 src: '/img/book/ch_rn_31.jpg',
                 text: '人教版三年级上册'
@@ -363,16 +273,6 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_42',
                 src: '/img/book/ch_su_42.jpg',
                 text: '苏教版四年级下册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_41',
-                src: '/img/book/ch_zh_41.jpg',
-                text: '浙教版四年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_42',
-                src: '/img/book/ch_zh_42.jpg',
-                text: '浙教版四年级下册'
               },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_41',
@@ -399,16 +299,6 @@ Page({
                 text: '苏教版五年级下册'
               },
               {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_51',
-                src: '/img/book/ch_zh_51.jpg',
-                text: '浙教版五年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_52',
-                src: '/img/book/ch_zh_52.jpg',
-                text: '浙教版五年级下册'
-              },
-              {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_51',
                 src: '/img/book/ch_rn_51.jpg',
                 text: '人教版五年级上册'
@@ -431,16 +321,6 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_62',
                 src: '/img/book/ch_su_62.jpg',
                 text: '苏教版六年级下册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_61',
-                src: '/img/book/ch_zh_61.jpg',
-                text: '浙教版六年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_zh_62',
-                src: '/img/book/ch_zh_62.jpg',
-                text: '浙教版六年级下册'
               },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_61',

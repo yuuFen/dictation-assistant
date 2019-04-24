@@ -32,60 +32,18 @@ Page({
     })
   },
 
-  // 文字转语音（语音合成）
-  wordtospeak: function (e) {
-    let that = this
+  // 转去 listenDetail
+  toDetail: function (e) {
+    let speak = '';
     let content = '';
     e.currentTarget.dataset.content.speak.forEach(word => {
-      content = content + word + '。';
+      speak = speak + word + '/';
     })
-    console.log(content);
-    let flag = 0
-    if (this.data.recording) {
-      manager.stop
-      flag = 1
-    }
-
-    plugin.textToSpeech({
-      lang: "zh_CN",
-      tts: true,
-      content: content,
-      success: function (res) {
-        console.log(" tts", res)
-        innerAudioContext.autoplay = true
-        innerAudioContext.src = res.filename
-        innerAudioContext.onPlay(() => {
-          console.log('开始播放')
-        })
-
-        wx.showLoading({
-          title: '正在播放',
-        })
-
-        innerAudioContext.onError((res) => {
-          if (res) {
-            wx.hideLoading(),
-              wx.showToast({
-                title: '文本格式错误',
-                image: '/images/fail.png',
-              })
-          }
-        })
-
-        innerAudioContext.onEnded(function () {
-          wx.stopBackgroundAudio();
-
-          manager.start({
-            lang: "zh_CN"
-          })
-
-          wx.hideLoading()
-        })
-      },
-      fail: function (res) {
-        console.log("fail tts", res)
-
-      }
+    e.currentTarget.dataset.content.content.forEach(word => {
+      content = content + word + '/';
+    })
+    wx.navigateTo({
+      url: '/pages/listenDetail/listenDetail?speak=' + speak + '&content=' + content,
     })
   },
 

@@ -8,14 +8,14 @@
   </view>
   <view class='swiper-box'>
       <swiper class='swiper'  style='height:{{conlist[current].length*150+135}}rpx;' current="{{current}}" bindchange="eventchange">
-        <swiper-item wx:for="{{conlist}}" wx:key="unique">
+        <swiper-item wx:for="{{conlist}}" wx:key="unit">
           <view class='tip'>左右滑动切换哦</view>
           <view class="module-container">
             <view class="box-wrapper" wx:for="{{item}}" wx:key="index">
               <view class="text-box">
                 <text>{{item.title}}</text>
               </view>
-              <view class="img-box" data-content='{{item}}' bindtap='wordtospeak'>
+              <view class="img-box" data-content='{{item}}' bindtap='toDetail'>
                 <image src='/img/listen2.png' mode="widthFix"></image>
               </view>
             </view>

@@ -6,11 +6,12 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"appid": "wx5e70b8193b030d54",
 	"projectname": "%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99",
-	"libVersion": "2.2.5",
+	"libVersion": "2.5.1",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -45,13 +46,6 @@
 				},
 				{
 					"id": -1,
-					"name": "listen&book=ch_su_11",
-					"pathName": "pages/listen/listen",
-					"query": "book=ch_su_11",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "listenAndTalk",
 					"pathName": "pages/listenAndTalk/listenAndTalk",
 					"query": "book=ch_su_11",
@@ -62,6 +56,13 @@
 					"name": "listenAndWrite",
 					"pathName": "pages/listenAndWrite/listenAndWrite",
 					"query": "book=ch_su_11",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "listenDetail",
+					"pathName": "pages/listenDetail/listenDetail",
+					"query": "speak=人，个人的人/口，一口的口/手，手上的手/足，多足的足/&content=人/口/手/足/",
 					"scene": null
 				}
 			]

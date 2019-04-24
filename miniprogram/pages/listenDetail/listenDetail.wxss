@@ -1,0 +1,31 @@
+#detail {
+  position: relative;
+}
+
+#detail .controller-box {
+  width: 100%;
+  position: absolute;
+  top: 160rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+#detail .controller-box .controller {
+  height: 300rpx;
+  width: 300rpx;
+}
+
+#detail .content-box {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 220rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row; 
+}
+#detail .content-box .content {
+  width: 100rpx;
+  font-size: 60rpx;
+}

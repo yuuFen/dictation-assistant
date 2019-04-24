@@ -1,0 +1,40 @@
+<view id='detail'>
+<van-transition name="fade" duration='1000' show="{{show}}">
+
+  <view style="width:80%;margin:0 auto;position:relitive;top:-80rpx;{{i==sum?'display:none':''}}">
+    <van-steps
+    steps="{{ steps }}"
+    active="{{ active }}"
+    /> 
+  </view>
+  <view class='controller-box'>
+    <image 
+      class='controller' 
+      bindtap='preWord'
+      hidden='{{i==sum?true:false}}' 
+      src="{{i==-1?'':'/img/pre.png'}}"
+    >上一个</image>
+    <image 
+      class='controller' 
+      bindtap='nextWord'
+      hidden='{{i==sum?true:false}}' 
+      src="/img/{{(i==-1?'start':i==sum-1?'end':'next')}}.png"
+    >下一个</image>
+    <image 
+      class='controller' 
+      bindtap='again'
+      hidden='{{i==sum?true:false}}' 
+      src="{{i==-1?'':'/img/again.png'}}"
+    >再读一遍</image>
+  </view>
+</van-transition>
+  <view style="{{i<sum?'display:none':''}}" class='content-box'>
+    请校对：
+      <view wx:for="{{content}}" wx:key="index" class='content'>
+        {{item}}
+      </view>
+  </view>
+
+
+
+</view>

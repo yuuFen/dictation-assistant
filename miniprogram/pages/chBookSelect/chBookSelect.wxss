@@ -1,6 +1,6 @@
 /* tab切换效果 */
 swiper {
-  height: 1300rpx;
+  height: 1000rpx;
 }
 .tab{ padding: 20rpx 0;}
 .tab-nav{

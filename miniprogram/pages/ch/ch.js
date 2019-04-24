@@ -15,16 +15,16 @@ Page({
         src: '/img/talk.png',
         text: '字词跟读'
       },
-      {
-        url: '/pages/speak/speak',
-        src: '/img/speak.png',
-        text: '课文朗读'
-      },
-      {
-        url: '/pages/write/write',
-        src: '/img/write.png',
-        text: '笔画练习'
-      }
+      // {
+      //   url: '/pages/speak/speak',
+      //   src: '/img/speak.png',
+      //   text: '课文朗读'
+      // },
+      // {
+      //   url: '/pages/write/write',
+      //   src: '/img/write.png',
+      //   text: '笔画练习'
+      // }
     ]
   },
 

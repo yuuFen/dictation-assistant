@@ -4,6 +4,7 @@ let plugin = requirePlugin("WechatSI");
 let manager = plugin.getRecordRecognitionManager();
 const innerAudioContext = wx.createInnerAudioContext();
 let that;
+let content;
 
 
 Page({
@@ -35,17 +36,10 @@ Page({
   // 文字转语音（语音合成）
   wordtospeak: function (e) {
     let that = this
-    let content = '';
-    e.currentTarget.dataset.content.speak.forEach(word => {
-      content = content + word + '。';
-    })
-    console.log(content);
-    let flag = 0
-    if (this.data.recording) {
-      manager.stop
-      flag = 1
+    content = '';
+    for (let key in e.currentTarget.dataset.content.speak) {
+      content = content + e.currentTarget.dataset.content.speak[key] + '。';
     }
-
     plugin.textToSpeech({
       lang: "zh_CN",
       tts: true,
@@ -54,32 +48,10 @@ Page({
         console.log(" tts", res)
         innerAudioContext.autoplay = true
         innerAudioContext.src = res.filename
-        innerAudioContext.onPlay(() => {
-          console.log('开始播放')
-        })
 
         wx.showLoading({
+          mask: true,
           title: '正在播放',
-        })
-
-        innerAudioContext.onError((res) => {
-          if (res) {
-            wx.hideLoading(),
-              wx.showToast({
-                title: '文本格式错误',
-                image: '/images/fail.png',
-              })
-          }
-        })
-
-        innerAudioContext.onEnded(function () {
-          wx.stopBackgroundAudio();
-
-          manager.start({
-            lang: "zh_CN"
-          })
-
-          wx.hideLoading()
         })
       },
       fail: function (res) {
@@ -135,6 +107,28 @@ Page({
           conlist: conlist
         })
       }
+    })
+    innerAudioContext.onPlay(() => {
+      console.log('开始播放')
+    })
+    innerAudioContext.onError((res) => {
+      if (res) {
+        console.log(res)
+        wx.hideLoading(),
+          wx.showToast({
+            title: '文本格式错误',
+            image: '/images/fail.png',
+          })
+      }
+    })
+    innerAudioContext.onEnded(function () {
+      wx.stopBackgroundAudio();
+
+      manager.start({
+        lang: "zh_CN"
+      })
+
+      wx.hideLoading()
     })
   },
 

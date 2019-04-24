@@ -3,6 +3,7 @@
     "pages/ch/ch",
     "pages/pk/pk",
     "pages/en/en",
+    "pages/listenDetail/listenDetail",
     "pages/listenAndWrite/listenAndWrite",
     "pages/listenAndTalk/listenAndTalk",
     "pages/chBookSelect/chBookSelect",
@@ -22,5 +23,8 @@
       "version": "0.2.3",
       "provider": "wx069ba97219f66d99"
     }
+  },
+  "usingComponents": {
+    "van-transition": "dist/transition/index"
   }
 }

@@ -18,6 +18,7 @@
 
 /* 模块 */
 #ch .module-container {
+  margin-top: 150rpx;
   width: 100%;
   display: flex;
   flex-wrap:wrap;
