@@ -10,7 +10,6 @@ Page({
   data: {
     current: 0,//当前所在滑块的 index
     scrollLeft: -90,//滚动条的位置,一个选项卡宽度是90（自定义来自css），按比例90*n设置位置
-    navlist: ["第一单元", "第二单元", "第三单元", "第四单元", "第五单元", "第六单元", "第七单元", "第八单元"],
     conlist: [],
   },
 
@@ -96,15 +95,36 @@ Page({
   onLoad: function (options) {
     console.log(options.book)
     that = this;
+    // setNavigationBarTitle
     let book = '';
-
-    if (options.book.search("su") != -1) { book += '苏教版' } else if (options.book.search("zh") != -1) { book += '浙教版' } else if (options.book.search("rn") != -1) { book += '人教版' } if (options.book.search("ch") != -1) { book += '语文' } else if (options.book.search("en") != -1) { book += '英语' } if (options.book.search("11") != -1) { book += '一年级上册' } else if (options.book.search("12") != -1) { book += '一年级下册' } else if (options.book.search("21") != -1) { book += '二年级上册' } else if (options.book.search("22") != -1) { book += '二年级下册' } else if (options.book.search("31") != -1) { book += '三年级上册' } else if (options.book.search("32") != -1) { book += '三年级下册' } else if (options.book.search("41") != -1) { book += '四年级上册' } else if (options.book.search("42") != -1) { book += '四年级下册' } else if (options.book.search("51") != -1) { book += '五年级上册' } else if (options.book.search("52") != -1) { book += '五年级下册' } else if (options.book.search("61") != -1) { book += '六年级上册' } else if (options.book.search("62") != -1) { book += '六年级下册' }
+    let bookLevel = {
+      "11": "一年级上册",
+      "12": "一年级下册",
+      "21": "二年级上册",
+      "22": "二年级下册",
+      "31": "三年级上册",
+      "32": "三年级下册",
+      "41": "四年级上册",
+      "42": "四年级下册",
+      "51": "五年级上册",
+      "52": "五年级下册",
+      "61": "六年级上册",
+      "62": "六年级下册",
+    }
+    if (options.book.search("ch") != -1) { book += '语文' } else if (options.book.search("en") != -1) { book += '英语' } 
+    if (options.book.search("su") != -1) { book += '苏教版' } else if (options.book.search("zh") != -1) { book += '浙教版' } else if (options.book.search("rn") != -1) { book += '人教版' } 
+    for (let key in bookLevel) {
+      if (options.book.search(key) != -1) { 
+        book += bookLevel[key] 
+      }
+    }
     wx.setNavigationBarTitle({
       title: book
     })
+    
     let dbBook = 'write_' + options.book;
     let conlist = [];
-    let unitNum;
+    // 只能读50条记录，要使用云函数
     db.collection(dbBook).get({
       success(res) {
         for (let i = 0; i < res.data[res.data.length - 1].unit; i++) {
