@@ -5,7 +5,6 @@
             <view wx:for="{{navlist}}" wx:key="unique" class='{{current==index?"on":""}}' data-current="{{index}}" bindtap='tab'>{{item}}</view> 
         </view>
       </scroll-view>
-      <view id='jianbian'></view>
 
       <swiper class='tab-box' current="{{current}}" bindchange="eventchange">
         <swiper-item wx:for="{{conlist}}" wx:key="unique">
@@ -20,10 +19,6 @@
               </navigator>
             </view>
           </view>
-
-
-
-
 
         </swiper-item>
     </swiper>

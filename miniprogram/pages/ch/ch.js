@@ -6,14 +6,14 @@ Page({
     hasUserInfo: false,
     moudles: [
       {
-        url: '/pages/chBookSelect/chBookSelect',
+        url: '/pages/chBookSelect/chBookSelect?func=listenAndWrite',
         src: '/img/listen.png',
         text: '语音听写'
       },
       {
-        url: '/pages/talk/talk',
+        url: '/pages/chBookSelect/chBookSelect?func=listenAndTalk',
         src: '/img/talk.png',
-        text: '对话练习'
+        text: '字词跟读'
       },
       {
         url: '/pages/speak/speak',

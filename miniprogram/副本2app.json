@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/ch/ch",
+    "pages/index/index",
+    "pages/user/user",
     "pages/pk/pk",
     "pages/en/en",
+    "pages/ch/ch",
     "pages/listenAndWrite/listenAndWrite",
     "pages/listenAndTalk/listenAndTalk",
     "pages/chBookSelect/chBookSelect",

@@ -1,17 +1,12 @@
 /* tab切换效果 */
 swiper {
-  height: 900rpx;
+  height: 1300rpx;
 }
 .tab{ padding: 20rpx 0;}
 .tab-nav{
   height: 80rpx;
   line-height: 80rpx;
   width: 100%;
-}
-#jianbian {
-  background:linear-gradient(to left,#FAF0E6,#ccc,#FAF0E6);
-  height: 1px;
-
 }
 .tab-nav .tab-nav-c view{
   float: left;
@@ -26,11 +21,24 @@ swiper {
 .tab-nav view.on{
   background: #FAF0E6;
   color: rgb(255, 201, 18);
+  position: relative;
+}
+.tab-nav view.on:after{
+   content: "";
+   display: block;
+   height: 6rpx;
+   width: 26px;
+   background: rgb(243, 189, 10);
+   position: absolute;
+   bottom: 2px;
+   left: 33px;
+   border-radius: 16rpx;
 }
 .tip {
   color: #aaa;
   text-align: center;
   font-size: 35rpx;
+  margin-top: 20rpx;
 }
 /* tab切换效果 */
 
@@ -42,13 +50,13 @@ swiper {
   box-sizing: border-box;
   flex-direction:row;
   justify-content: center;
-  margin-top: 90rpx;
+  margin-top: 50rpx;
 }
 #chBookSelect .module-container .box-wrapper{
   height: 300rpx;
   width: 200rpx;
-  margin: 0 60rpx;
-  margin-bottom: 64rpx;
+  margin: 0 70rpx;
+  margin-bottom: 85rpx;
 } 
 /* 服务选项 */
 #chBookSelect .module-container .box-wrapper .servicebox{
@@ -61,6 +69,8 @@ swiper {
 #chBookSelect .module-container .box-wrapper .servicebox .box-img{
   height:250rpx;
   width: 100%;
-  margin-bottom: 5rpx;
+
+  margin-bottom: 10rpx;
+  box-shadow: 2px 2px 3px #aaa;
 }
 /* 书本选项 */

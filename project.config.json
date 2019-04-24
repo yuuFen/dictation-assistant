@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -37,16 +37,30 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "chBookSelect",
 					"pathName": "pages/chBookSelect/chBookSelect",
-					"query": "",
+					"query": "func=listenAndWrite",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "listen&book=ch_su_11",
 					"pathName": "pages/listen/listen",
+					"query": "book=ch_su_11",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "listenAndTalk",
+					"pathName": "pages/listenAndTalk/listenAndTalk",
+					"query": "book=ch_su_11",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "listenAndWrite",
+					"pathName": "pages/listenAndWrite/listenAndWrite",
 					"query": "book=ch_su_11",
 					"scene": null
 				}
