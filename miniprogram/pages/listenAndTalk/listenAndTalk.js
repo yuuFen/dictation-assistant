@@ -125,7 +125,6 @@ Page({
       manager.start({
         lang: "zh_CN"
       })
-
       wx.hideLoading()
     })
   },
@@ -155,7 +154,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    innerAudioContext.offPlay();
   },
 
   /**
