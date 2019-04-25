@@ -1,5 +1,3 @@
-const db = wx.cloud.database();
-const _ = db.command;
 let plugin = requirePlugin("WechatSI");
 let manager = plugin.getRecordRecognitionManager();
 const innerAudioContext = wx.createInnerAudioContext();
@@ -96,18 +94,18 @@ Page({
     
     let dbBook = 'talk_' + options.book;
     let conlist = [];
-    // 只能读50条数据，要使用云函数
-    db.collection(dbBook).get({
-      success(res) {
-        for (let i = 0; i < res.data[res.data.length - 1].unit; i ++) {
-          conlist[i] = res.data.filter(object => object.unit == (i + 1));
-        }
-        console.log(conlist);
-        that.setData({
-          conlist: conlist
-        })
+    // 使用云函数,只能读100条
+    wx.cloud.callFunction({
+      name: 'getContent',
+      data: {
+        dbBook: dbBook
       }
+    }).then(res => {
+      that.setData({
+        conlist: res.result
+      });
     })
+
     innerAudioContext.onPlay(() => {
       console.log('开始播放')
     })

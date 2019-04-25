@@ -82,17 +82,16 @@ Page({
     
     let dbBook = 'write_' + options.book;
     let conlist = [];
-    // 只能读50条记录，要使用云函数
-    db.collection(dbBook).get({
-      success(res) {
-        for (let i = 0; i < res.data[res.data.length - 1].unit; i++) {
-          conlist[i] = res.data.filter(object => object.unit == (i + 1));
-        }
-        console.log(conlist);
-        that.setData({
-          conlist: conlist
-        })
+    // 使用云函数，能读100条
+    wx.cloud.callFunction({
+      name: 'getContent',
+      data: {
+        dbBook: dbBook
       }
+    }).then(res => {
+      that.setData({
+        conlist: res.result
+      });
     })
   },
 

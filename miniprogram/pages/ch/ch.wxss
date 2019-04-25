@@ -2,23 +2,22 @@
   padding: 0 30rpx;
   height: 200rpx;
   margin: 0 auto;
-  margin-top: 80rpx;
+  margin-top: 120rpx;
   margin-bottom: 40rpx;
-  justify-content: center;  
+  justify-content: center; 
+  text-align: center; 
   border-radius: 20rpx;
   overflow: hidden;
 }
 
 #ch .title-wrapper .title-img {
-  width: 100%;
-  height: 200rpx;
-  border-radius: 20rpx;
-  background-color: #d2d2d2;
+  width: 90%;
+  /* border-radius: 20rpx; */
 }
 
 /* 模块 */
 #ch .module-container {
-  margin-top: 150rpx;
+  margin-top: 190rpx;
   width: 100%;
   display: flex;
   flex-wrap:wrap;
