@@ -22,10 +22,11 @@
   margin-top: 220rpx;
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
   flex-direction: row; 
+  flex-wrap: wrap;
 }
 #detail .content-box .content {
-  width: 100rpx;
   font-size: 60rpx;
+  margin: 0 20rpx;
+  display: line-block;
 }
