@@ -35,8 +35,8 @@ Page({
   wordtospeak: function (e) {
     let that = this
     content = '';
-    for (let key in e.currentTarget.dataset.content.speak) {
-      content = content + e.currentTarget.dataset.content.speak[key] + '。';
+    for (let key in e.currentTarget.dataset.content.content) {
+      content = content + e.currentTarget.dataset.content.content[key] + '。';
     }
     plugin.textToSpeech({
       lang: "zh_CN",
@@ -94,8 +94,8 @@ Page({
     wx.setNavigationBarTitle({
       title: book
     })
-    //后期改为talk
-    let dbBook = 'write_' + options.book;
+
+    let dbBook = 'talk_' + options.book;
     let conlist = [];
     // 使用云函数,只能读100条
     wx.cloud.callFunction({
@@ -124,8 +124,6 @@ Page({
       }
     })
     innerAudioContext.onEnded(function () {
-      wx.stopBackgroundAudio();
-      innerAudioContext.destroy();
       manager.start({
         lang: "zh_CN"
       })
@@ -162,7 +160,6 @@ Page({
     innerAudioContext.offEnded();
     innerAudioContext.offError();
     innerAudioContext.stop();
-    innerAudioContext.destroy();
     wx.stopBackgroundAudio();
     manager.start({
       lang: "zh_CN"

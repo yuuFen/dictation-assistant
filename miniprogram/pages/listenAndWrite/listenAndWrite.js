@@ -34,16 +34,12 @@ Page({
 
   // 转去 listenDetail
   toDetail: function (e) {
-    let speak = '';
     let content = '';
-    e.currentTarget.dataset.content.speak.forEach(word => {
-      speak = speak + word + '/';
-    })
     e.currentTarget.dataset.content.content.forEach(word => {
       content = content + word + '/';
     })
     wx.navigateTo({
-      url: '/pages/listenDetail/listenDetail?speak=' + speak + '&content=' + content,
+      url: '/pages/listenDetail/listenDetail?&content=' + content,
     })
   },
 

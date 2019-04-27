@@ -5,7 +5,6 @@ let manager = plugin.getRecordRecognitionManager();
 const innerAudioContext = wx.createInnerAudioContext();
 
 let content;
-let speak;
 let that;
 let i;
 let active;
@@ -15,7 +14,6 @@ Page({
     i: -1,
     sum: 99,
     content: [],
-    speak:[],
     steps: [],
     active: -1,
     show: true
@@ -53,7 +51,7 @@ Page({
       active: ++active,
       i: i+1
     });
-    that.wordToSpeak(speak[i+1]);
+    that.wordToSpeak(content[i+1]);
   },
 
   // 上一个
@@ -65,7 +63,7 @@ Page({
         active: --active,
         i: i - 1
       });
-      that.wordToSpeak(speak[i-1]);
+      that.wordToSpeak(content[i-1]);
     } else {
       wx.showToast({
         icon: 'none',
@@ -78,20 +76,17 @@ Page({
   again: function (e) {
     i = this.data.i;
     if (i > -1) {
-      that.wordToSpeak(speak[i]);
+      that.wordToSpeak(content[i]);
     }
   },
 
   onLoad: function (options) {
     console.log(options);
     that = this;
-    speak = options.speak.split('/');
-    speak.pop(); 
     content = options.content.split('/');
     content.pop();
     this.setData({
-      sum: speak.length,
-      speak: speak,
+      sum: content.length,
       content: content,
       steps: content
     })
@@ -109,8 +104,6 @@ Page({
       }
     })
     innerAudioContext.onEnded(function () {
-      wx.stopBackgroundAudio();
-
       manager.start({
         lang: "zh_CN"
       })
@@ -144,7 +137,15 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    innerAudioContext.offPlay();
+    innerAudioContext.offEnded();
+    innerAudioContext.offError();
+    innerAudioContext.stop();
+    wx.stopBackgroundAudio();
+    manager.start({
+      lang: "zh_CN"
+    })
+    wx.hideLoading()
   },
 
   /**

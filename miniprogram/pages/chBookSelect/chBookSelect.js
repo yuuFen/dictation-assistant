@@ -31,7 +31,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.func)
+    options.func = 'listenAndWrite';
     if (options.func == 'listenAndWrite') {
       wx.setNavigationBarTitle({
         title: '语音听写'
