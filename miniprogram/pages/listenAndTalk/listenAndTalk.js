@@ -44,8 +44,8 @@ Page({
       content: content,
       success: function (res) {
         console.log(" tts", res)
-        innerAudioContext.autoplay = true
-        innerAudioContext.src = res.filename
+        innerAudioContext.src = res.filename;
+        innerAudioContext.play();
 
         wx.showLoading({
           mask: true,
@@ -63,7 +63,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.book)
+    wx.showLoading({
+      title: '加载中',
+    });
+    console.log(options.book);
     that = this;
     // setNavigationBarTitle
     let book = '';
@@ -91,8 +94,8 @@ Page({
     wx.setNavigationBarTitle({
       title: book
     })
-    
-    let dbBook = 'talk_' + options.book;
+    //后期改为talk
+    let dbBook = 'write_' + options.book;
     let conlist = [];
     // 使用云函数,只能读100条
     wx.cloud.callFunction({
@@ -104,6 +107,7 @@ Page({
       that.setData({
         conlist: res.result
       });
+        wx.hideLoading();
     })
 
     innerAudioContext.onPlay(() => {
@@ -121,7 +125,7 @@ Page({
     })
     innerAudioContext.onEnded(function () {
       wx.stopBackgroundAudio();
-
+      innerAudioContext.destroy();
       manager.start({
         lang: "zh_CN"
       })
@@ -155,6 +159,16 @@ Page({
    */
   onUnload: function () {
     innerAudioContext.offPlay();
+    innerAudioContext.offEnded();
+    innerAudioContext.offError();
+    innerAudioContext.stop();
+    innerAudioContext.destroy();
+    wx.stopBackgroundAudio();
+    manager.start({
+      lang: "zh_CN"
+    })
+    wx.hideLoading()
+
   },
 
   /**
