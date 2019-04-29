@@ -1,23 +1,28 @@
-// pages/userCollectList/userCollectList.js
+let that;
+let collect;
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    collect: {}
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    that = this;
+    wx.cloud.callFunction({
+      name: 'getUserCollectList',
+      data: {},
+      success: res => {
+          collect = res.result.data[0].collect
+          // arr转json对象，key为内容，value为次数；或者保存为两个arr数组
+          // 把第一项push入数组1，删除并统计相同元素，push进数组2，再把第一项push入数组1
 
+      },
+      fail: err => {
+        console.error('[云函数] [getUserCollectList] 调用失败', err)
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
 
   },

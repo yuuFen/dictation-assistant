@@ -1,0 +1,18 @@
+// 云函数入口文件
+const cloud = require('wx-server-sdk')
+
+cloud.init()
+
+const db = cloud.database({
+  env: 'tsdx-e4b587'
+})
+
+// 云函数入口函数
+exports.main = async (event, context) => {
+  const wxContext = cloud.getWXContext();
+  const openid = wxContext.OPENID;
+
+  return await db.collection('userCollectList').where({
+    openid: openid
+  }).get();
+}
