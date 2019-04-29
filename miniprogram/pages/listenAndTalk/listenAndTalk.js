@@ -1,6 +1,7 @@
 let plugin = requirePlugin("WechatSI");
 let manager = plugin.getRecordRecognitionManager();
 const innerAudioContext = wx.createInnerAudioContext();
+// let innerAudioContext.offPlay();
 let that;
 let content;
 
@@ -63,6 +64,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //  innerAudioContext = wx....
     wx.showLoading({
       title: '加载中',
     });

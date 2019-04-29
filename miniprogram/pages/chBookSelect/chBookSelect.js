@@ -1,4 +1,4 @@
-
+const app = getApp()
 
 Page({
 
@@ -41,6 +41,16 @@ Page({
           {
             moudles: [
               {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_11',
+                src: '/img/book/ch_rn_11.jpg',
+                text: '部编版一年级上册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_12',
+                src: '/img/book/ch_rn_12.jpg',
+                text: '部编版一年级下册'
+              },
+              {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_11',
                 src: '/img/book/ch_su_11.jpg',
                 text: '苏教版一年级上册'
@@ -49,21 +59,21 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_12',
                 src: '/img/book/ch_su_12.jpg',
                 text: '苏教版一年级下册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_11',
-                src: '/img/book/ch_rn_11.jpg',
-                text: '人教版一年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_12',
-                src: '/img/book/ch_rn_12.jpg',
-                text: '人教版一年级下册'
               }
             ]
           },
           {
             moudles: [
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_21',
+                src: '/img/book/ch_rn_21.jpg',
+                text: '部编版二年级上册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_22',
+                src: '/img/book/ch_rn_22.jpg',
+                text: '部编版二年级下册'
+              },
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_21',
                 src: '/img/book/ch_su_21.jpg',
@@ -73,21 +83,21 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_22',
                 src: '/img/book/ch_su_22.jpg',
                 text: '苏教版二年级下册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_21',
-                src: '/img/book/ch_rn_21.jpg',
-                text: '人教版二年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_22',
-                src: '/img/book/ch_rn_22.jpg',
-                text: '人教版二年级下册'
               }
             ]
           },
           {
             moudles: [
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_31',
+                src: '/img/book/ch_rn_31.jpg',
+                text: '部编版三年级上册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_32',
+                src: '/img/book/ch_rn_32.jpg',
+                text: '部编版三年级下册'
+              }, 
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_31',
                 src: '/img/book/ch_su_31.jpg',
@@ -97,31 +107,11 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_32',
                 src: '/img/book/ch_su_32.jpg',
                 text: '苏教版三年级下册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_31',
-                src: '/img/book/ch_rn_31.jpg',
-                text: '人教版三年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_32',
-                src: '/img/book/ch_rn_32.jpg',
-                text: '人教版三年级下册'
               }
             ]
           },
           {
             moudles: [
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_41',
-                src: '/img/book/ch_su_41.jpg',
-                text: '苏教版四年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_42',
-                src: '/img/book/ch_su_42.jpg',
-                text: '苏教版四年级下册'
-              },
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_41',
                 src: '/img/book/ch_rn_41.jpg',
@@ -131,21 +121,21 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_42',
                 src: '/img/book/ch_rn_42.jpg',
                 text: '人教版四年级下册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_41',
+                src: '/img/book/ch_su_41.jpg',
+                text: '苏教版四年级上册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_42',
+                src: '/img/book/ch_su_42.jpg',
+                text: '苏教版四年级下册'
               }
             ]
           },
           {
             moudles: [
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_51',
-                src: '/img/book/ch_su_51.jpg',
-                text: '苏教版五年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_52',
-                src: '/img/book/ch_su_52.jpg',
-                text: '苏教版五年级下册'
-              },
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_51',
                 src: '/img/book/ch_rn_51.jpg',
@@ -155,21 +145,21 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_52',
                 src: '/img/book/ch_rn_52.jpg',
                 text: '人教版五年级下册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_51',
+                src: '/img/book/ch_su_51.jpg',
+                text: '苏教版五年级上册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_52',
+                src: '/img/book/ch_su_52.jpg',
+                text: '苏教版五年级下册'
               }
             ]
           },
           {
             moudles: [
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_61',
-                src: '/img/book/ch_su_61.jpg',
-                text: '苏教版六年级上册'
-              },
-              {
-                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_62',
-                src: '/img/book/ch_su_62.jpg',
-                text: '苏教版六年级下册'
-              },
               {
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_61',
                 src: '/img/book/ch_rn_61.jpg',
@@ -179,6 +169,16 @@ Page({
                 url: '/pages/listenAndWrite/listenAndWrite?book=ch_rn_62',
                 src: '/img/book/ch_rn_62.jpg',
                 text: '人教版六年级下册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_61',
+                src: '/img/book/ch_su_61.jpg',
+                text: '苏教版六年级上册'
+              },
+              {
+                url: '/pages/listenAndWrite/listenAndWrite?book=ch_su_62',
+                src: '/img/book/ch_su_62.jpg',
+                text: '苏教版六年级下册'
               }
             ]
           },
@@ -193,6 +193,16 @@ Page({
           {
             moudles: [
               {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_11',
+                src: '/img/book/ch_rn_11.jpg',
+                text: '部编版一年级上册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_12',
+                src: '/img/book/ch_rn_12.jpg',
+                text: '部编版一年级下册'
+              },
+              {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_11',
                 src: '/img/book/ch_su_11.jpg',
                 text: '苏教版一年级上册'
@@ -201,21 +211,21 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_12',
                 src: '/img/book/ch_su_12.jpg',
                 text: '苏教版一年级下册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_11',
-                src: '/img/book/ch_rn_11.jpg',
-                text: '人教版一年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_12',
-                src: '/img/book/ch_rn_12.jpg',
-                text: '人教版一年级下册'
               }
             ]
           },
           {
             moudles: [
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_21',
+                src: '/img/book/ch_rn_21.jpg',
+                text: '部编版二年级上册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_22',
+                src: '/img/book/ch_rn_22.jpg',
+                text: '部编版二年级下册'
+              },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_21',
                 src: '/img/book/ch_su_21.jpg',
@@ -225,21 +235,21 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_22',
                 src: '/img/book/ch_su_22.jpg',
                 text: '苏教版二年级下册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_21',
-                src: '/img/book/ch_rn_21.jpg',
-                text: '人教版二年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_22',
-                src: '/img/book/ch_rn_22.jpg',
-                text: '人教版二年级下册'
               }
             ]
           },
           {
             moudles: [
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_31',
+                src: '/img/book/ch_rn_31.jpg',
+                text: '部编版三年级上册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_32',
+                src: '/img/book/ch_rn_32.jpg',
+                text: '部编版三年级下册'
+              },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_31',
                 src: '/img/book/ch_su_31.jpg',
@@ -249,31 +259,11 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_32',
                 src: '/img/book/ch_su_32.jpg',
                 text: '苏教版三年级下册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_31',
-                src: '/img/book/ch_rn_31.jpg',
-                text: '人教版三年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_32',
-                src: '/img/book/ch_rn_32.jpg',
-                text: '人教版三年级下册'
               }
             ]
           },
           {
             moudles: [
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_41',
-                src: '/img/book/ch_su_41.jpg',
-                text: '苏教版四年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_42',
-                src: '/img/book/ch_su_42.jpg',
-                text: '苏教版四年级下册'
-              },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_41',
                 src: '/img/book/ch_rn_41.jpg',
@@ -283,21 +273,21 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_42',
                 src: '/img/book/ch_rn_42.jpg',
                 text: '人教版四年级下册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_41',
+                src: '/img/book/ch_su_41.jpg',
+                text: '苏教版四年级上册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_42',
+                src: '/img/book/ch_su_42.jpg',
+                text: '苏教版四年级下册'
               }
             ]
           },
           {
             moudles: [
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_51',
-                src: '/img/book/ch_su_51.jpg',
-                text: '苏教版五年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_52',
-                src: '/img/book/ch_su_52.jpg',
-                text: '苏教版五年级下册'
-              },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_51',
                 src: '/img/book/ch_rn_51.jpg',
@@ -307,21 +297,21 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_52',
                 src: '/img/book/ch_rn_52.jpg',
                 text: '人教版五年级下册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_51',
+                src: '/img/book/ch_su_51.jpg',
+                text: '苏教版五年级上册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_52',
+                src: '/img/book/ch_su_52.jpg',
+                text: '苏教版五年级下册'
               }
             ]
           },
           {
             moudles: [
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_61',
-                src: '/img/book/ch_su_61.jpg',
-                text: '苏教版六年级上册'
-              },
-              {
-                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_62',
-                src: '/img/book/ch_su_62.jpg',
-                text: '苏教版六年级下册'
-              },
               {
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_61',
                 src: '/img/book/ch_rn_61.jpg',
@@ -331,13 +321,39 @@ Page({
                 url: '/pages/listenAndTalk/listenAndTalk?book=ch_rn_62',
                 src: '/img/book/ch_rn_62.jpg',
                 text: '人教版六年级下册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_61',
+                src: '/img/book/ch_su_61.jpg',
+                text: '苏教版六年级上册'
+              },
+              {
+                url: '/pages/listenAndTalk/listenAndTalk?book=ch_su_62',
+                src: '/img/book/ch_su_62.jpg',
+                text: '苏教版六年级下册'
               }
             ]
           },
         ],
       })
     }
+
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        console.log('[云函数] [login] user openid: ', res.result.openid)
+        app.globalData.openid = res.result.openid
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+      }
+    })
   },
+  toCollect: function () {
+    
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

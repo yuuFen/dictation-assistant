@@ -35,11 +35,17 @@ Page({
   // 转去 listenDetail
   toDetail: function (e) {
     let content = '';
-    e.currentTarget.dataset.content.content.forEach(word => {
+    let speak = '';
+    for (let word of e.currentTarget.dataset.content.content) {
       content = content + word + '/';
-    })
+    }
+    if (e.currentTarget.dataset.content.speak) {
+      for (let word of e.currentTarget.dataset.content.speak) {
+        speak = speak + word + '/';
+      }
+    }
     wx.navigateTo({
-      url: '/pages/listenDetail/listenDetail?&content=' + content,
+      url: '/pages/listenDetail/listenDetail?content=' + content + '&speak=' + speak,
     })
   },
 

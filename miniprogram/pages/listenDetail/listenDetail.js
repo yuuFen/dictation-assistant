@@ -5,6 +5,7 @@ let manager = plugin.getRecordRecognitionManager();
 const innerAudioContext = wx.createInnerAudioContext();
 
 let content;
+let speak;
 let that;
 let i;
 let active;
@@ -21,7 +22,7 @@ Page({
 
   // 文字转语音（语音合成）
   wordToSpeak: function (word) {
-    let that = this
+    let that = this;
 
     plugin.textToSpeech({
       lang: "zh_CN",
@@ -51,7 +52,7 @@ Page({
       active: ++active,
       i: i+1
     });
-    that.wordToSpeak(content[i+1]);
+    that.wordToSpeak(this.data.content[i+1]);
   },
 
   // 上一个
@@ -63,7 +64,7 @@ Page({
         active: --active,
         i: i - 1
       });
-      that.wordToSpeak(content[i-1]);
+      that.wordToSpeak(this.data.content[i-1]);
     } else {
       wx.showToast({
         icon: 'none',
@@ -76,18 +77,20 @@ Page({
   again: function (e) {
     i = this.data.i;
     if (i > -1) {
-      that.wordToSpeak(content[i]);
+      that.wordToSpeak(this.data.content[i]);
     }
   },
 
   onLoad: function (options) {
     console.log(options);
     that = this;
+    speak = options.speak.split('/');
+    speak.pop();
     content = options.content.split('/');
     content.pop();
     this.setData({
       sum: content.length,
-      content: content,
+      content: (speak.length == 0 ? content : speak),
       steps: content
     })
     innerAudioContext.onPlay(() => {

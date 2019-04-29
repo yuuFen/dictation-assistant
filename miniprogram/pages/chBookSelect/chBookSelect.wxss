@@ -1,3 +1,14 @@
+
+
+.toCollect {
+  position: fixed;
+  bottom: 80rpx;
+  right: 30rpx;
+  font-size: 40rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: rgba(255, 213, 124, 0.925)
+}
 /* tab切换效果 */
 swiper {
   height: 1000rpx;

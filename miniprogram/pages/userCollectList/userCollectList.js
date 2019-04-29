@@ -1,4 +1,4 @@
-// pages/pk/pk.js
+// pages/userCollectList/userCollectList.js
 Page({
 
   /**

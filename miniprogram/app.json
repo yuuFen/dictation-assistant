@@ -2,7 +2,8 @@
   "pages": [
     "pages/chBookSelect/chBookSelect",
     "pages/listenDetail/listenDetail",
-    "pages/listenAndWrite/listenAndWrite"
+    "pages/listenAndWrite/listenAndWrite",
+    "pages/userCollectList/userCollectList"
   ],
   "window": {
     "backgroundColor": "#FAF0E6",
