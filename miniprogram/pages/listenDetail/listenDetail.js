@@ -4,8 +4,7 @@ let plugin = requirePlugin("WechatSI");
 let manager = plugin.getRecordRecognitionManager();
 const innerAudioContext = wx.createInnerAudioContext();
 
-let content;
-let speak;
+
 let that;
 let i;
 let active;
@@ -14,10 +13,12 @@ Page({
   data: {
     i: -1,
     sum: 99,
+    userCollect: [],
     content: [],
     steps: [],
     active: -1,
-    show: true
+    show: true,
+    submit: false
   },
 
   // 文字转语音（语音合成）
@@ -52,11 +53,7 @@ Page({
       active: ++active,
       i: i+1
     });
-    if (this.data.speak.length == 0) {
-      that.wordToSpeak(this.data.content[i + 1]);
-    } else {
-      that.wordToSpeak(this.data.speak[i + 1]);
-    }
+    that.wordToSpeak(this.data.speak[i+1]);
   },
 
   // 上一个
@@ -68,11 +65,7 @@ Page({
         active: --active,
         i: i - 1
       });
-      if (this.data.speak.length == 0) {
-        that.wordToSpeak(this.data.content[i - 1]);        
-      } else {
-        that.wordToSpeak(this.data.speak[i-1]);
-      }
+      that.wordToSpeak(this.data.speak[i-1]);
     } else {
       wx.showToast({
         icon: 'none',
@@ -85,15 +78,15 @@ Page({
   again: function (e) {
     i = this.data.i;
     if (i > -1) {
-      if (this.data.speak.length == 0) {
-        that.wordToSpeak(this.data.content[i]);
-      } else {
-        that.wordToSpeak(this.data.speak[i]);
-      }
+      that.wordToSpeak(this.data.speak[i]);
     }
   },
 
   onLoad: function (options) {
+
+    let content = [];
+    let speak = [];
+    let contentTemp = [];
     console.log(options);
     that = this;
     speak = options.speak.split('/');
@@ -102,10 +95,19 @@ Page({
     content.pop();
     this.setData({
       sum: content.length,
-      content: content,
-      speak: speak,
+      speak: (speak.length == 0 ? content : speak),
       steps: content
     })
+    for (let name of content) {
+      let o = {};
+      o['name'] = name;
+      o['value'] = name;
+      contentTemp.push(o);
+    }
+    that.setData({
+      content: contentTemp
+    })
+
     innerAudioContext.onPlay(() => {
       console.log('开始播放')
     })
@@ -123,11 +125,73 @@ Page({
       manager.start({
         lang: "zh_CN"
       })
-
       wx.hideLoading()
     })
+
   },
 
+  checkboxChange: function (e) {
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value);
+
+    var checkboxItems = this.data.content, values = e.detail.value;
+    for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
+      checkboxItems[i].checked = false;
+
+      for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
+        if (checkboxItems[i].value == values[j]) {
+          checkboxItems[i].checked = true;
+          break;
+        }
+      }
+    }
+
+    this.setData({
+      content: checkboxItems,
+      userCollect: e.detail.value
+    });
+  },
+
+  submit: function () {
+    this.setData({
+      submit: true
+    })
+    wx.showLoading({
+      title: '提交中...',
+      mask:true
+    })
+    let userCollectID;
+    if (that.data.userCollect) {
+      db.collection('userCollectList').add({
+        data: {
+          collect: that.data.userCollect
+        },
+        success(res) {
+          wx.hideLoading();
+          wx.showToast({
+            title: '提交成功！',
+            duration: 3000,
+            mask: true
+          })
+          setTimeout(() => {
+            wx.navigateBack({
+            })
+          }, 1000)     
+        }
+      })
+    } else {
+      wx.hideLoading();
+      wx.showToast({
+        title: '提交成功！',
+        duration: 3000,
+        mask: true
+      })
+      setTimeout(() => {
+        wx.navigateBack({
+        })    
+      },1000)
+    }
+
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

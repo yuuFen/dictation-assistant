@@ -19,29 +19,14 @@ Page({
       name: 'getUserCollectList',
       data: {},
       success: res => {
-        // 统计词语以及出现次数
-        if (res.result.data[0]) {
-          collectArr = res.result.data[0].collect;
-          for (let i = 0, l = collectArr.length; i < l; i++) {
-            let item = collectArr[i];
-            collectObj[item] = (collectObj[item] + 1) || 1;
-          }
-          for (let i in collectObj) {
-            let o = {};
-            o['count'] = collectObj[i];
-            o['name'] = i;
-            collect.push(o);
-          }
-        }
         that.setData({
-          collect: collect,
+          collect: res.result,
         });
         wx.hideLoading();
-        console.log(that.data.collect);
-      },
-      fail: err => {
       }
     })
+
+    
   },
 
   onReady: function () {

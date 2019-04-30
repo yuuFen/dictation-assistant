@@ -1,19 +1,35 @@
 #detail {
   position: relative;
 }
-
+.weui-cell {
+  width: 40%;
+}
+checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.weui-cell__bd {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 #detail .controller-box {
+  margin-top: 200rpx;
   width: 100%;
   position: absolute;
-  top: 160rpx;
+  top: 80rpx;
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 #detail .controller-box .controller {
   height: 300rpx;
   width: 300rpx;
+  margin: 0 10rpx;
+  margin-bottom: 60rpx;
 }
 
 #detail .content-box {

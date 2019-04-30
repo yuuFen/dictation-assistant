@@ -1,37 +1,46 @@
 <view id='detail'>
-<van-transition name="fade" duration='1000' show="{{show}}">
+  <van-transition name="fade" duration='1000' show="{{show}}">
 
-  <view style="width:80%;margin:0 auto;position:relitive;top:-80rpx;{{i==sum?'display:none':''}}">
-    <van-steps
-    steps="{{ steps }}"
-    active="{{ active }}"
-    /> 
+    <view style="width:80%;margin:0 auto;position:relitive;top:-80rpx;{{i==sum?'display:none':''}}">
+      <van-steps
+      steps="{{ steps }}"
+      active="{{ active }}"
+      /> 
+    </view>
+    <view class='controller-box' style="{{i==sum?'display:none':''}}">
+      <image 
+        class='controller' 
+        bindtap='preWord'
+        src="{{i==-1?'':'/img/pre.png'}}"
+      >上一个</image>
+      <image 
+        class='controller' 
+        bindtap='nextWord'
+        src="/img/{{(i==-1?'start':i==sum-1?'end':'next')}}.png"
+      >下一个</image>
+      <image 
+        class='controller' 
+        bindtap='again'
+        src="{{i==-1?'':'/img/again.png'}}"
+      >再读一遍</image>
+    </view>
+  </van-transition>
+  <view style="{{i<sum?'display:none':''}}">
+    <view class="weui-cells__title" style="font-size:16px;color:#000;margin-bottom:40rpx;">请校对：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="weui-cell weui-check__label" wx:for="{{content}}" wx:key="index">
+          <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+          <view class="weui-cell__hd weui-check__hd_in-checkbox">
+            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+            <icon class="weui-icon-checkbox_success" type="cancel" size="23" wx:if="{{item.checked}}"></icon>
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" style='background-color:#fff' plain="" type="default" bindtap="submit" disabled='{{submit}}'>提交错题</button>
+    </view>
   </view>
-  <view class='controller-box' style="{{i==sum?'display:none':''}}">
-    <image 
-      class='controller' 
-      bindtap='preWord'
-      src="{{i==-1?'':'/img/pre.png'}}"
-    >上一个</image>
-    <image 
-      class='controller' 
-      bindtap='nextWord'
-      src="/img/{{(i==-1?'start':i==sum-1?'end':'next')}}.png"
-    >下一个</image>
-    <image 
-      class='controller' 
-      bindtap='again'
-      src="{{i==-1?'':'/img/again.png'}}"
-    >再读一遍</image>
-  </view>
-</van-transition>
-  <view style="{{i<sum?'display:none':''}}" class='content-box'>
-    请校对并提交错题：
-      <view wx:for="{{content}}" wx:key="index" class='content'>
-        {{item}}
-      </view>
-  </view>
-
-
-
 </view>

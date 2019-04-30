@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -62,7 +62,7 @@
 					"id": 4,
 					"name": "listenDetail",
 					"pathName": "pages/listenDetail/listenDetail",
-					"query": "speak=人，个人的人/口，一口的口/手，手上的手/足，多足的足/&content=人/口/手/足/",
+					"query": "speak=&content=人人一一/一一一一/二二/三三/",
 					"scene": null
 				},
 				{
