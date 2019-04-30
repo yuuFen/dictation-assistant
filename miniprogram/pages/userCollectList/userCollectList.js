@@ -1,24 +1,45 @@
 let that;
-let collect;
+
+
 Page({
 
   data: {
-    collect: {}
+    collect: ['']
   },
 
   onLoad: function (options) {
     that = this;
+    let collectArr = [];
+    let collectObj = {};
+    let collect = [];
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.cloud.callFunction({
       name: 'getUserCollectList',
       data: {},
       success: res => {
-          collect = res.result.data[0].collect
-          // arr转json对象，key为内容，value为次数；或者保存为两个arr数组
-          // 把第一项push入数组1，删除并统计相同元素，push进数组2，再把第一项push入数组1
-
+        // 统计词语以及出现次数
+        if (res.result.data[0]) {
+          collectArr = res.result.data[0].collect;
+          for (let i = 0, l = collectArr.length; i < l; i++) {
+            let item = collectArr[i];
+            collectObj[item] = (collectObj[item] + 1) || 1;
+          }
+          for (let i in collectObj) {
+            let o = {};
+            o['count'] = collectObj[i];
+            o['name'] = i;
+            collect.push(o);
+          }
+        }
+        that.setData({
+          collect: collect,
+        });
+        wx.hideLoading();
+        console.log(that.data.collect);
       },
       fail: err => {
-        console.error('[云函数] [getUserCollectList] 调用失败', err)
       }
     })
   },

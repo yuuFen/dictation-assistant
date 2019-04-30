@@ -9,6 +9,7 @@
   line-height: 70rpx;
   background-color: rgba(255, 213, 124, 0.925);
   z-index: 999;
+  box-shadow: 2px 2px 2px #bbb;
 }
 /* tab切换效果 */
 swiper {

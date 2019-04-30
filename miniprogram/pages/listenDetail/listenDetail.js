@@ -52,7 +52,11 @@ Page({
       active: ++active,
       i: i+1
     });
-    that.wordToSpeak(this.data.content[i+1]);
+    if (this.data.speak.length == 0) {
+      that.wordToSpeak(this.data.content[i + 1]);
+    } else {
+      that.wordToSpeak(this.data.speak[i + 1]);
+    }
   },
 
   // 上一个
@@ -64,7 +68,11 @@ Page({
         active: --active,
         i: i - 1
       });
-      that.wordToSpeak(this.data.content[i-1]);
+      if (this.data.speak.length == 0) {
+        that.wordToSpeak(this.data.content[i - 1]);        
+      } else {
+        that.wordToSpeak(this.data.speak[i-1]);
+      }
     } else {
       wx.showToast({
         icon: 'none',
@@ -77,7 +85,11 @@ Page({
   again: function (e) {
     i = this.data.i;
     if (i > -1) {
-      that.wordToSpeak(this.data.content[i]);
+      if (this.data.speak.length == 0) {
+        that.wordToSpeak(this.data.content[i]);
+      } else {
+        that.wordToSpeak(this.data.speak[i]);
+      }
     }
   },
 
@@ -90,7 +102,8 @@ Page({
     content.pop();
     this.setData({
       sum: content.length,
-      content: (speak.length == 0 ? content : speak),
+      content: content,
+      speak: speak,
       steps: content
     })
     innerAudioContext.onPlay(() => {

@@ -1,1 +1,19 @@
-/* pages/userCollectList/userCollectList.wxss */
+page {
+      background-color: #F8F8F8;
+
+}
+
+
+.weui-cells {
+  margin-top: 120rpx;
+}
+
+.weui-cell {
+  width: 90%;
+}
+
+
+
+.weui-cell__bd {
+  margin-left: 40rpx;
+}

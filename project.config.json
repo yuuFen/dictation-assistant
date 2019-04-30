@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -63,6 +63,13 @@
 					"name": "listenDetail",
 					"pathName": "pages/listenDetail/listenDetail",
 					"query": "speak=人，个人的人/口，一口的口/手，手上的手/足，多足的足/&content=人/口/手/足/",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "错题",
+					"pathName": "pages/userCollectList/userCollectList",
+					"query": "func=listenAndTalk",
 					"scene": null
 				}
 			]
