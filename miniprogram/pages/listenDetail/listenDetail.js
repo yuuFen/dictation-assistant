@@ -69,7 +69,7 @@ Page({
     } else {
       wx.showToast({
         icon: 'none',
-        title: '已经是第一个了！',
+        title: '没有上一个了！',
       })
     }
   },
@@ -79,6 +79,11 @@ Page({
     i = this.data.i;
     if (i > -1) {
       that.wordToSpeak(this.data.speak[i]);
+    } else {
+      wx.showToast({
+        icon: 'none',
+        title: '请先开始噢！',
+      })
     }
   },
 

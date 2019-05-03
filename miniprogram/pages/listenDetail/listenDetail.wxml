@@ -1,30 +1,49 @@
 <view id='detail'>
-  <van-transition name="fade" duration='1000' show="{{show}}">
 
-    <view style="width:80%;margin:0 auto;position:relitive;top:-80rpx;{{i==sum?'display:none':''}}">
+  <van-transition name="fade" duration='1000' show="{{show}}" style="{{i==sum?'display:none':''}}">
+    
+    <view style="width:80%;margin:0 auto;position:relitive;top:-80rpx;">
       <van-steps
       steps="{{ steps }}"
       active="{{ active }}"
       /> 
     </view>
-    <view class='controller-box' style="{{i==sum?'display:none':''}}">
-      <image 
-        class='controller' 
-        bindtap='preWord'
-        src="{{i==-1?'':'/img/pre.png'}}"
-      >上一个</image>
-      <image 
-        class='controller' 
-        bindtap='nextWord'
-        src="/img/{{(i==-1?'start':i==sum-1?'end':'next')}}.png"
-      >下一个</image>
-      <image 
-        class='controller' 
-        bindtap='again'
-        src="{{i==-1?'':'/img/again.png'}}"
-      >再读一遍</image>
+
+    <view class="page__bd">
+        <view class="icon-box" bindtap='preWord'>
+            <image 
+              class='icon' 
+              style='  width: 150rpx;height: 150rpx;'
+              src="/img/pre.png"
+            >上一个</image>
+            <view class="icon-box__ctn">
+                <view class="icon-box__title">上一个</view>
+            </view>
+        </view>
+        <view class="icon-box" bindtap='nextWord'>
+            <image 
+              class='icon' 
+              src="/img/{{(i==-1?'start':i==sum-1?'end':'next')}}.png"
+            >下一个</image>
+            <view class="icon-box__ctn">
+                <view class="icon-box__title">下一个</view>
+            </view>
+        </view>
+        <view class="icon-box" style='margin-bottom: 0;' bindtap='again'>
+            <image 
+              class='icon' 
+              style='  width: 150rpx;height: 150rpx;'
+              src="/img/again.png"
+            >再读一遍</image>
+            <view class="icon-box__ctn">
+                <view class="icon-box__title">再读一遍</view>
+            </view>
+        </view>
     </view>
   </van-transition>
+
+
+
   <view style="{{i<sum?'display:none':''}}">
     <view class="weui-cells__title" style="font-size:16px;color:#000;margin-bottom:40rpx;">请校对：</view>
     <view class="weui-cells weui-cells_after-title">

@@ -14,23 +14,7 @@ checkbox-group {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#detail .controller-box {
-  margin-top: 200rpx;
-  width: 100%;
-  position: absolute;
-  top: 80rpx;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-}
-#detail .controller-box .controller {
-  height: 300rpx;
-  width: 300rpx;
-  margin: 0 10rpx;
-  margin-bottom: 60rpx;
-}
+
 
 #detail .content-box {
   width: 80%;
@@ -45,4 +29,31 @@ checkbox-group {
   font-size: 60rpx;
   margin: 0 20rpx;
   display: line-block;
+}
+.page__bd {
+    margin-top: 90rpx;
+    padding: 0 30px;
+    text-align: left;
+}
+.icon-box{
+    margin-bottom: 80rpx;
+    display: flex;
+    align-items: center;
+    border: 2px solid #FF9933;
+    border-radius: 80rpx;
+    box-shadow: 4px 4px 4px #ddd;
+    background-color: rgba(255, 224, 51, 0.329);
+    padding: 30rpx 20rpx;
+    justify-content: center;
+}
+.icon-box__ctn{
+    flex-shrink: 100;
+}
+.icon-box__title{
+    font-size: 20px;
+}
+.icon {
+  width: 250rpx;
+  height: 250rpx;
+  margin-right: 30rpx
 }
