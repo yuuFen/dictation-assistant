@@ -30,6 +30,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 4,
 			"list": [
@@ -54,10 +58,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "listenAndWrite",
 					"pathName": "pages/listenAndWrite/listenAndWrite",
-					"query": "book=ch_su_11",
+					"query": "book=ch_rn_61",
 					"scene": null
 				},
 				{

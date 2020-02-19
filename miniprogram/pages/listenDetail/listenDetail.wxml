@@ -2,18 +2,26 @@
 
   <van-transition name="fade" duration='1000' show="{{show}}" style="{{i==sum?'display:none':''}}">
     
+            <view class="percentage-container">
+          <view class="percentage">
+            <text style="font-size:30px;font-weight:500;color:#707070;">{{ active + 1 }} </text>
+            <text style="font-size:25px;color:#b1b1b1;">{{ '/ ' + steps.length }}</text>
+          </view>
+        </view>
+
+<!--     
     <view style="width:80%;margin:0 auto;position:relitive;top:-80rpx;">
       <van-steps
       steps="{{ steps }}"
       active="{{ active }}"
       /> 
-    </view>
+    </view> -->
 
     <view class="page__bd">
         <view class="icon-box" bindtap='preWord'>
             <image 
               class='icon' 
-              style='  width: 150rpx;height: 150rpx;'
+              style='width: 150rpx;height: 150rpx;'
               src="/img/pre.png"
             >上一个</image>
             <view class="icon-box__ctn">
@@ -26,7 +34,7 @@
               src="/img/{{(i==-1?'start':i==sum-1?'end':'next')}}.png"
             >下一个</image>
             <view class="icon-box__ctn">
-                <view class="icon-box__title">下一个</view>
+                <view class="icon-box__title">{{active < 0 ? '开始' : '下一个'}}</view>
             </view>
         </view>
         <view class="icon-box" style='margin-bottom: 0;' bindtap='again'>

@@ -2,7 +2,7 @@
   position: fixed;
   left: 20rpx;
   bottom: 30rpx;
-  background: #FAF0E6;
+  background: #faf0e6;
   border: none;
   text-align: left;
   margin: 0px;
@@ -10,12 +10,12 @@
   border-radius: 0;
 }
 .button::after {
- border: none;
- border-radius: 0;
+  border: none;
+  border-radius: 0;
 }
 .button_title {
- font-size: 12px;
- color: rgb(114, 112, 112);
+  font-size: 12px;
+  color: rgb(114, 112, 112);
 }
 
 .toCollect {
@@ -44,37 +44,39 @@
 swiper {
   height: 1000rpx;
 }
-.tab{ padding: 20rpx 0;}
-.tab-nav{
+.tab {
+  padding: 20rpx 0;
+}
+.tab-nav {
   height: 80rpx;
   line-height: 80rpx;
   width: 100%;
 }
-.tab-nav .tab-nav-c view{
+.tab-nav .tab-nav-c view {
   float: left;
   height: 80rpx;
   line-height: 80rpx;
-  background: #FAF0E6;
+  background: #faf0e6;
   width: 90px;
   font-size: 30rpx;
   text-align: center;
   color: #000;
 }
-.tab-nav view.on{
-  background: #FAF0E6;
+.tab-nav view.on {
+  background: #faf0e6;
   color: rgb(255, 201, 18);
   position: relative;
 }
-.tab-nav view.on:after{
-   content: "";
-   display: block;
-   height: 6rpx;
-   width: 26px;
-   background: rgb(243, 189, 10);
-   position: absolute;
-   bottom: 2px;
-   left: 33px;
-   border-radius: 16rpx;
+.tab-nav view.on:after {
+  content: '';
+  display: block;
+  height: 6rpx;
+  width: 26px;
+  background: rgb(243, 189, 10);
+  position: absolute;
+  bottom: 2px;
+  left: 33px;
+  border-radius: 16rpx;
 }
 .tip {
   color: #aaa;
@@ -88,31 +90,31 @@ swiper {
 #chBookSelect .module-container {
   width: 100%;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   box-sizing: border-box;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   margin-top: 70rpx;
 }
-#chBookSelect .module-container .box-wrapper{
+#chBookSelect .module-container .box-wrapper {
   height: 300rpx;
   width: 200rpx;
   margin: 0 70rpx;
   margin-bottom: 85rpx;
-} 
+}
 /* 服务选项 */
-#chBookSelect .module-container .box-wrapper .servicebox{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+#chBookSelect .module-container .box-wrapper .servicebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-#chBookSelect .module-container .box-wrapper .servicebox .box-img{
-  height:250rpx;
+#chBookSelect .module-container .box-wrapper .servicebox .box-img {
+  height: 250rpx;
   width: 100%;
 
-  margin-bottom: 10rpx;
+  margin-bottom: 15rpx;
   box-shadow: 2px 2px 3px #aaa;
 }
 /* 书本选项 */

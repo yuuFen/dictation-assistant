@@ -11,11 +11,11 @@
         <swiper-item wx:for="{{conlist}}" wx:key="unit">
           <view class='tip'>左右滑动切换哦</view>
           <view class="module-container">
-            <view class="box-wrapper" wx:for="{{item}}" wx:key="index">
+            <view class="box-wrapper" data-content='{{item}}' bindtap='toDetail' wx:for="{{item}}" wx:key="index">
               <view class="text-box">
                 <text>{{item.title}}</text>
               </view>
-              <view class="img-box" data-content='{{item}}' bindtap='toDetail'>
+              <view class="img-box">
                 <image src='/img/listen2.png' mode="widthFix"></image>
               </view>
             </view>

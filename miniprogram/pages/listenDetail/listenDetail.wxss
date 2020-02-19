@@ -1,3 +1,19 @@
+.percentage-container {
+  text-align: center;
+}
+.percentage {
+  margin-top: 20rpx;
+  /* box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 5px 0 rgba(0, 0, 0, 0.19); */
+  display: inline-block;
+  height: 15vw;
+  line-height: calc(15vw);
+  width: 30vw;
+  text-align: center;
+  border-radius: 20rpx;
+  /* border: solid 2px #FFF100; */
+  /* background-color: #b2dfdb; */
+}
+
 #detail {
   position: relative;
 }
@@ -36,13 +52,14 @@ checkbox-group {
     text-align: left;
 }
 .icon-box{
-    margin-bottom: 80rpx;
+    /* margin-bottom: 80rpx; */
     display: flex;
     align-items: center;
-    border: 2px solid #FF9933;
-    border-radius: 80rpx;
-    box-shadow: 4px 4px 4px #ddd;
-    background-color: rgba(255, 224, 51, 0.329);
+    /* border: 2px solid #FF9933; */
+    /* border-radius: 80rpx; */
+    /* box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 5px 0 rgba(0, 0, 0, 0.19); */
+
+    /* background-color: rgba(255, 224, 51, 0.329); */
     padding: 30rpx 20rpx;
     justify-content: center;
 }

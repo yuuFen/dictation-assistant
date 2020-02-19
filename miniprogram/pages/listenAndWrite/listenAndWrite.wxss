@@ -5,7 +5,7 @@
 /* tab切换效果 */
 .swiper-box {
   /* overflow-y: scroll; */
-  height: 90%;
+  height: calc(100% - 80rpx);
   position: absolute;
   width: 100%;
 }
@@ -32,7 +32,8 @@ scroll-view{
 /* 顶部tab */
 .tab{
   height: 80rpx;
-  box-shadow: 0px 2px 3px #888888;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.19);
+
 }
 .tab-nav{
   height: 80rpx;
@@ -69,6 +70,9 @@ scroll-view{
 /* tab切换效果 */
 
 /* 词语 */
+swiper-item{
+  overflow: auto;
+}
 #listen .module-container {
   width: 100%;
   display: flex;
@@ -78,13 +82,17 @@ scroll-view{
   align-items: center;
 }
 #listen .module-container .box-wrapper{
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #c2c2c2;
+  /* background-color: #f2f2f2; */
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 5px 0 rgba(0, 0, 0, 0.19);
+  width: 95%;
+  margin: 10rpx 0;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.02);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap:nowrap;
-  width: 100%;
   height: 150rpx;
   justify-content: center;
 } 
