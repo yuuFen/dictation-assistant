@@ -3,7 +3,8 @@
     "pages/chBookSelect/chBookSelect",
     "pages/listenDetail/listenDetail",
     "pages/listenAndWrite/listenAndWrite",
-    "pages/userCollectList/userCollectList"
+    "pages/userCollectList/userCollectList",
+    "pages/userRecommend/userRecommend"
   ],
   "window": {
     "backgroundColor": "#FAF0E6",
@@ -14,12 +15,13 @@
   },
   "plugins": {
     "WechatSI": {
-      "version": "0.2.3",
+      "version": "0.3.3",
       "provider": "wx069ba97219f66d99"
     }
   },
   "usingComponents": {
     "van-transition": "dist/transition/index",
     "van-steps": "dist/steps/index"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

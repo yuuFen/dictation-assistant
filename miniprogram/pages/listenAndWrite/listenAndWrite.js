@@ -75,7 +75,7 @@ Page({
       "62": "六年级下册",
     }
     if (options.book.search("ch") != -1) { book += '语文' } else if (options.book.search("en") != -1) { book += '英语' } 
-    if (options.book.search("su") != -1) { book += '苏教版' } else if (options.book.search("zh") != -1) { book += '浙教版' } else if (options.book.search("rn") != -1) { book += '人教版' } 
+    if (options.book.search("su") != -1) { book += '苏教版' } else if (options.book.search("zh") != -1) { book += '浙教版' } else if (options.book.search("rn") != -1 && (options.book.search("4") != -1 || options.book.search("5") != -1 || options.book.search("6") != -1)) { book += '人教版' } else { book += '部编版' } 
     for (let key in bookLevel) {
       if (options.book.search(key) != -1) { 
         book += bookLevel[key] 

@@ -2,7 +2,15 @@
   <button 
     class='toCollect' 
     bindtap='toCollect'
-  >错题</button>
+  >我的错题</button>
+  <button 
+    class='toRecommend' 
+    bindtap='toRecommend'
+  >每日十词</button>
+  <button class='button' open-type="feedback">
+    <icon type="info_circle" color='rgba(255, 0, 0, 0.6)' size="16" style='margin-right:2px;'></icon> 
+    <text class='button_title'>反馈建议</text>
+  </button>
   <view class='tab'>
       <scroll-view scroll-x="true" class='tab-nav' scroll-left='{{scrollLeft}}' scroll-with-animation="true">
         <view class='tab-nav-c' style='width:{{navlist.length*90}}px'>
