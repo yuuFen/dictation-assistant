@@ -54,20 +54,21 @@
 
   <view style="{{i<sum?'display:none':''}}">
     <view class="weui-cells__title" style="font-size:16px;color:#000;margin-bottom:40rpx;">请校对：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <checkbox-group bindchange="checkboxChange">
-        <label class="weui-cell weui-check__label" wx:for="{{content}}" wx:key="index">
-          <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
-          <view class="weui-cell__hd weui-check__hd_in-checkbox">
-            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
-            <icon class="weui-icon-checkbox_success" type="cancel" size="23" wx:if="{{item.checked}}"></icon>
-          </view>
-          <view class="weui-cell__bd">{{item.name}}</view>
-        </label>
-      </checkbox-group>
+    <view class="check-container">
+      <view wx:for="{{content}}" wx:key="index" class="check-text" bindtap="checkboxChange" data-checked-value="{{item.value}}" data-checked-index="{{index}}">
+        <view>
+          {{item.name}}
+        </view>
+        <image
+          wx:if="{{ item.right }}"
+          src="/img/right.png"
+          class="check-img"></image>
+      </view>
     </view>
+
+
     <view class="weui-btn-area">
-      <button class="weui-btn" style='background-color:#fff' plain="" type="default" bindtap="submit" disabled='{{submit}}'>提交错题</button>
+      <button class="weui-btn" style='background-color:#fff' plain="" type="default" bindtap="submit" disabled='{{submit}}'>提交</button>
     </view>
   </view>
 </view>

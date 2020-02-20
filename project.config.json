@@ -68,7 +68,7 @@
 					"id": 4,
 					"name": "listenDetail",
 					"pathName": "pages/listenDetail/listenDetail",
-					"query": "speak=&content=人人一一/一一一一/二二/三三/",
+					"query": "speak=&content=人人一一/一一一一/",
 					"scene": null
 				},
 				{

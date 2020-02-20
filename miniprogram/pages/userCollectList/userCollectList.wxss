@@ -5,7 +5,7 @@ page {
 
 
 .weui-cells {
-  margin-top: 120rpx;
+  margin-top: 10rpx;
 }
 
 .weui-cell {
