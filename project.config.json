@@ -1,84 +1,84 @@
 {
-	"miniprogramRoot": "miniprogram/",
-	"cloudfunctionRoot": "cloudfunctions/",
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
-	},
-	"appid": "wx5e70b8193b030d54",
-	"projectname": "%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99",
-	"libVersion": "2.5.1",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 4,
-			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "chBookSelect",
-					"pathName": "pages/chBookSelect/chBookSelect",
-					"query": "func=listenAndTalk",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "listenAndTalk",
-					"pathName": "pages/listenAndTalk/listenAndTalk",
-					"query": "book=ch_su_11",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "listenAndWrite",
-					"pathName": "pages/listenAndWrite/listenAndWrite",
-					"query": "book=ch_rn_61",
-					"scene": null
-				},
-				{
-					"id": 4,
-					"name": "listenDetail",
-					"pathName": "pages/listenDetail/listenDetail",
-					"query": "speak=&content=人人一一/一一一一/",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "错题",
-					"pathName": "pages/userCollectList/userCollectList",
-					"query": "func=listenAndTalk",
-					"scene": null
-				}
-			]
-		}
-	}
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "autoAudits": false
+  },
+  "appid": "wx5e70b8193b030d54",
+  "projectname": "%E5%90%AC%E8%AF%B4%E8%AF%BB%E5%86%99",
+  "libVersion": "2.5.1",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 4,
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": 1,
+          "name": "chBookSelect",
+          "pathName": "pages/chBookSelect/chBookSelect",
+          "query": "func=listenAndTalk",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "listenAndTalk",
+          "pathName": "pages/listenAndTalk/listenAndTalk",
+          "query": "book=ch_su_11",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "listenAndWrite",
+          "pathName": "pages/listenAndWrite/listenAndWrite",
+          "query": "book=ch_rn_61",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "listenDetail",
+          "pathName": "pages/listenDetail/listenDetail",
+          "query": "speak=&content=人人一一/一一一一/",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "错题",
+          "pathName": "pages/userCollectList/userCollectList",
+          "query": "func=listenAndTalk",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

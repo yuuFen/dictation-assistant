@@ -1,12 +1,25 @@
-# 云开发 quickstart
+<div align=center>
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+![QRcode](https://yuufen.com/uploads/gh_c284a8c36d7e_258.jpg)
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+</div>
 
-## 参考文档
+# 听写助手   
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+[![GitHub license](http://img.shields.io/github/license/yuuFen/dictation-assistant)](https://github.com/yuuFen/dictation-assistant/blob/master/LICENSE) [![test](https://img.shields.io/badge/platform-微信小程序-green)]()
+
+听写助手是一款由学生独立开发的，基于[云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)，通过[语音合成](https://github.com/Tencent/Face2FaceTranslator)，提供语文字词听写、批改以及错题回顾功能的小程序。旨在解决小学生无法自主完成听写的问题，减轻家长和孩子的负担。
+
+获得 2019 高校微信小程序开发大赛 华东赛区三等奖，累计用户近 5000 人。
+
+## 下载与使用
+
+1. 克隆代码
+2. `project.config.json` 中的 `appid` 替换成在公众平台申请的项目 id
+3. 在 `公众平台 → 设置 → 第三方服务 → 插件管理` 中添加微信同声传译插件 (`wx069ba97219f66d99`)
+4. 打开微信开发者工具中添加项目
+
+## LICENSE
+
+[MIT license](LICENSE)
 
