@@ -107,6 +107,7 @@ Page({
         that.setData({
           conlist: res.result,
         })
+        console.log(this.data.conlist)
         wx.hideLoading()
       })
   },
