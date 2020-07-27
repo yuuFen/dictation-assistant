@@ -8,7 +8,7 @@
 
 [![GitHub license](http://img.shields.io/github/license/yuuFen/dictation-assistant)](https://github.com/yuuFen/dictation-assistant/blob/master/LICENSE) [![test](https://img.shields.io/badge/platform-微信小程序-green)]()
 
-听写助手是一款由学生独立开发的，基于[云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)，通过[语音合成](https://github.com/Tencent/Face2FaceTranslator)，提供语文字词听写、批改以及错题回顾功能的小程序。旨在解决小学生无法自主完成听写的问题，减轻家长和孩子的负担。
+听写助手是一款基于[云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)，通过[语音合成](https://github.com/Tencent/Face2FaceTranslator)，提供语文字词听写、批改以及错题回顾功能的小程序。旨在解决小学生无法自主完成听写的问题，减轻家长和孩子的负担。
 
 获得 2019 高校微信小程序开发大赛 华东赛区三等奖，累计用户近 5000 人。
 
